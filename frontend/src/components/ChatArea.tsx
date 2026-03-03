@@ -31,9 +31,10 @@ interface ChatAreaProps {
     messages: Message[];
     isThinking: boolean;
     onSend: (question: string) => void;
+    onViewTree?: () => void;
 }
 
-export default function ChatArea({ activeDoc, messages, isThinking, onSend }: ChatAreaProps) {
+export default function ChatArea({ activeDoc, messages, isThinking, onSend, onViewTree }: ChatAreaProps) {
     const [input, setInput] = useState('');
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -91,9 +92,25 @@ export default function ChatArea({ activeDoc, messages, isThinking, onSend }: Ch
                     {isReady && (
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
-                            <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+                            <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider hidden md:inline-block">
                                 {activeDoc.num_sections} sections indexed
                             </span>
+                            {onViewTree && (
+                                <button
+                                    onClick={onViewTree}
+                                    className="ml-2 flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 hover:border-navy hover:text-navy text-gray-600 rounded-lg text-xs font-semibold shadow-sm transition-all"
+                                >
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <line x1="10" y1="12" x2="21" y2="12"></line>
+                                        <line x1="10" y1="18" x2="21" y2="18"></line>
+                                        <line x1="10" y1="6" x2="21" y2="6"></line>
+                                        <line x1="4" y1="12" x2="4.01" y2="12"></line>
+                                        <line x1="4" y1="18" x2="4.01" y2="18"></line>
+                                        <line x1="4" y1="6" x2="4.01" y2="6"></line>
+                                    </svg>
+                                    View Tree
+                                </button>
+                            )}
                         </div>
                     )}
                 </div>
@@ -215,8 +232,8 @@ export default function ChatArea({ activeDoc, messages, isThinking, onSend }: Ch
                 <form
                     onSubmit={handleSubmit}
                     className={`flex items-center gap-3 bg-white border-2 rounded-2xl px-3 py-2 transition-all shadow-sm ${!isReady || isThinking
-                            ? 'border-gray-200 bg-gray-50/50'
-                            : 'border-gray-200 focus-within:border-navy focus-within:ring-4 focus-within:ring-navy-50'
+                        ? 'border-gray-200 bg-gray-50/50'
+                        : 'border-gray-200 focus-within:border-navy focus-within:ring-4 focus-within:ring-navy-50'
                         }`}
                 >
                     <input

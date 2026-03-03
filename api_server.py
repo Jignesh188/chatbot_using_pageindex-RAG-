@@ -27,6 +27,10 @@ from pageindex.utils import (
     count_tokens, structure_to_list, ConfigLoader
 )
 
+from fastapi.responses import FileResponse
+from database import get_logger, get_chat_collection, get_doc_collection
+
+logger = get_logger()
 app = FastAPI(title="PageIndex API", version="1.0.0")
 
 # Allow Next.js frontend
@@ -37,9 +41,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# In-memory store for processed documents
-documents = {}
 
 UPLOAD_DIR = Path("./uploads")
 RESULTS_DIR = Path("./results")
@@ -104,18 +105,24 @@ async def upload_pdf(file: UploadFile = File(...), model: str = "gpt-oss:120b-cl
     with open(pdf_path, "wb") as f:
         shutil.copyfileobj(file.file, f)
 
-    # Mark as processing
-    documents[doc_id] = {
-        "doc_id": doc_id,
-        "doc_name": file.filename,
-        "pdf_path": str(pdf_path),
-        "status": "processing",
-        "processing_time": None,
-        "total_tokens": None,
-        "num_sections": None,
-        "tree_data": None,
-        "node_map": None,
-    }
+    # Insert into MongoDB
+    doc_collection = get_doc_collection()
+    if doc_collection is not None:
+        await doc_collection.insert_one({
+            "doc_id": doc_id,
+            "doc_name": file.filename,
+            "pdf_path": str(pdf_path),
+            "status": "processing",
+            "processing_time": None,
+            "total_tokens": None,
+            "num_sections": None,
+            "tree_data": None,
+            "node_map": None,
+            "timestamp": time.time()
+        })
+    else:
+        logger.error("DB Not initialized. Upload failed.")
+        raise HTTPException(status_code=500, detail="Database not connected")
 
     # Process in background
     asyncio.create_task(_process_pdf(doc_id, str(pdf_path), model))
@@ -169,35 +176,44 @@ async def _process_pdf(doc_id: str, pdf_path: str, model: str):
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(tree_data, f, indent=2)
 
-        # Update document store
-        documents[doc_id].update({
-            "status": "completed",
-            "processing_time": processing_time,
-            "total_tokens": total_tokens,
-            "num_sections": len(node_map),
-            "tree_data": tree_data,
-            "node_map": node_map,
-        })
+        # Update document store in MongoDB
+        doc_collection = get_doc_collection()
+        if doc_collection is not None:
+            await doc_collection.update_one(
+                {"doc_id": doc_id},
+                {"$set": {
+                    "status": "completed",
+                    "processing_time": processing_time,
+                    "total_tokens": total_tokens,
+                    "num_sections": len(node_map),
+                    "tree_data": tree_data,
+                    "node_map": node_map
+                }}
+            )
 
-        print(f"\n{'='*60}")
-        print(f"📄 Document processed: {os.path.basename(pdf_path)}")
-        print(f"⏱️  Processing time: {processing_time}s")
-        print(f"🔢 Tokens used: {total_tokens}")
-        print(f"📑 Sections found: {len(node_map)}")
-        print(f"{'='*60}\n")
+        logger.info(f"📄 Document processed: {os.path.basename(pdf_path)} - {processing_time}s - {total_tokens} tokens - {len(node_map)} sections")
 
     except Exception as e:
-        documents[doc_id]["status"] = "error"
-        documents[doc_id]["error"] = str(e)
-        print(f"❌ Error processing {doc_id}: {e}")
+        logger.error(f"❌ Error processing {doc_id}: {e}")
+        doc_collection = get_doc_collection()
+        if doc_collection is not None:
+            await doc_collection.update_one(
+                {"doc_id": doc_id},
+                {"$set": {"status": "error", "error": str(e)}}
+            )
 
 
 @app.get("/api/status/{doc_id}", response_model=DocumentInfo)
 async def get_status(doc_id: str):
-    """Check processing status of a document."""
-    if doc_id not in documents:
+    """Check processing status of a document from MongoDB."""
+    doc_collection = get_doc_collection()
+    if doc_collection is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+        
+    doc = await doc_collection.find_one({"doc_id": doc_id})
+    if not doc:
         raise HTTPException(status_code=404, detail="Document not found")
-    doc = documents[doc_id]
+        
     return DocumentInfo(
         doc_id=doc["doc_id"],
         doc_name=doc["doc_name"],
@@ -210,7 +226,14 @@ async def get_status(doc_id: str):
 
 @app.get("/api/documents")
 async def list_documents():
-    """List all processed documents."""
+    """List all processed documents from MongoDB."""
+    doc_collection = get_doc_collection()
+    if doc_collection is None:
+        return []
+        
+    cursor = doc_collection.find().sort("timestamp", -1)
+    docs = await cursor.to_list(length=1000)
+    
     return [
         DocumentInfo(
             doc_id=doc["doc_id"],
@@ -220,17 +243,121 @@ async def list_documents():
             total_tokens=doc.get("total_tokens"),
             num_sections=doc.get("num_sections"),
         )
-        for doc in documents.values()
+        for doc in docs
     ]
+
+@app.delete("/api/documents/{doc_id}")
+async def delete_document(doc_id: str):
+    """Delete a document, its chat history, and physical files."""
+    doc_collection = get_doc_collection()
+    chat_collection = get_chat_collection()
+    if doc_collection is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+        
+    doc = await doc_collection.find_one({"doc_id": doc_id})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Document not found")
+        
+    # Delete from MongoDB
+    await doc_collection.delete_one({"doc_id": doc_id})
+    if chat_collection is not None:
+        await chat_collection.delete_many({"doc_id": doc_id})
+        
+    # Delete physical PDF if exists
+    pdf_path = doc.get("pdf_path")
+    if pdf_path and os.path.exists(pdf_path):
+        os.remove(pdf_path)
+    
+    # Delete result JSON if exists
+    pdf_name = os.path.splitext(os.path.basename(doc.get("doc_name", "")))[0]
+    result_path = RESULTS_DIR / f"{doc_id}_{pdf_name}_structure.json" # Not always this format, but we'll try to clean up what we can.
+    # Actually, tree results are saved as:
+    pdf_name_actual_file = os.path.splitext(os.path.basename(pdf_path))[0]
+    result_path_actual = RESULTS_DIR / f"{pdf_name_actual_file}_structure.json"
+    if os.path.exists(result_path_actual):
+        os.remove(result_path_actual)
+        
+    logger.info(f"🗑️ Deleted document {doc_id} successfully")
+    return {"status": "success", "message": "Document deleted"}
+
+@app.get("/api/documents/{doc_id}/view")
+async def view_document(doc_id: str):
+    """Serve the PDF file directly for viewing."""
+    doc_collection = get_doc_collection()
+    if doc_collection is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+        
+    doc = await doc_collection.find_one({"doc_id": doc_id})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Document not found")
+        
+    pdf_path = doc.get("pdf_path")
+    if not pdf_path or not os.path.exists(pdf_path):
+        raise HTTPException(status_code=404, detail="PDF file not found on disk")
+        
+    return FileResponse(pdf_path, media_type="application/pdf", filename=doc["doc_name"])
+
+
+@app.get("/api/documents/{doc_id}/tree")
+async def get_document_tree(doc_id: str):
+    """Fetch the generated PageIndex tree structure for a document."""
+    doc_collection = get_doc_collection()
+    if doc_collection is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+        
+    doc = await doc_collection.find_one({"doc_id": doc_id})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Document not found")
+        
+    if doc.get("status") != "completed":
+        raise HTTPException(status_code=400, detail="Document tree not ready yet")
+
+    tree_data = doc.get("tree_data")
+    if isinstance(tree_data, dict) and 'structure' in tree_data:
+        return {"result": tree_data['structure']}
+    return {"result": tree_data}
+
+
+@app.get("/api/chat/history/{doc_id}")
+async def get_chat_history(doc_id: str):
+    """Fetch chat history for a document from MongoDB."""
+    chat_collection = get_chat_collection()
+    if chat_collection is None:
+        return []
+    try:
+        cursor = chat_collection.find({"doc_id": doc_id}).sort("timestamp", 1)
+        history = await cursor.to_list(length=100)
+        
+        formatted_history = []
+        for entry in history:
+            formatted_history.append({
+                "role": "user",
+                "content": entry.get("user_query", "")
+            })
+            formatted_history.append({
+                "role": "bot",
+                "content": entry.get("bot_response", ""),
+                "sections": entry.get("relevant_sections", []),
+                "tokens": entry.get("tokens_used", 0),
+                "time": entry.get("response_time", 0)
+            })
+        return formatted_history
+    except Exception as e:
+        print(f"❌ Error fetching chat history: {e}")
+        return []
 
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
     """Chat with a processed document using tree search + answer generation."""
-    if req.doc_id not in documents:
+    doc_collection = get_doc_collection()
+    if doc_collection is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+        
+    doc = await doc_collection.find_one({"doc_id": req.doc_id})
+    if not doc:
         raise HTTPException(status_code=404, detail="Document not found")
 
-    doc = documents[req.doc_id]
     if doc["status"] != "completed":
         raise HTTPException(status_code=400, detail="Document is still processing")
 
@@ -313,7 +440,25 @@ Provide a clear, concise answer based only on the context provided."""
 
     response_time = round(time.time() - start_time, 2)
 
-    print(f"💬 Chat: \"{req.question[:50]}...\" → {tokens_used} tokens, {response_time}s")
+    logger.info(f"💬 Chat: \"{req.question[:50]}...\" → {tokens_used} tokens, {response_time}s")
+
+    # ─── Save to MongoDB ─────────────────────────────────────────────────
+    chat_collection = get_chat_collection()
+    if chat_collection is not None:
+        try:
+            chat_entry = {
+                "doc_id": req.doc_id,
+                "user_query": req.question,
+                "bot_response": answer,
+                "relevant_sections": relevant_sections,
+                "tokens_used": tokens_used,
+                "response_time": response_time,
+                "timestamp": time.time()
+            }
+            await chat_collection.insert_one(chat_entry)
+            print(f"💾 Chat history saved to MongoDB for doc_id {req.doc_id}")
+        except Exception as e:
+            print(f"⚠️ Failed to save chat history to MongoDB: {e}")
 
     return ChatResponse(
         answer=answer,
@@ -326,6 +471,6 @@ Provide a clear, concise answer based only on the context provided."""
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n🚀 Starting PageIndex API server on http://localhost:8000")
-    print("📖 API docs at http://localhost:8000/docs\n")
+    logger.info("🚀 Starting PageIndex API server on http://localhost:8000")
+    logger.info("📖 API docs at http://localhost:8000/docs")
     uvicorn.run(app, host="0.0.0.0", port=8000)

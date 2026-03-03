@@ -1,0 +1,202 @@
+[
+  {
+    "total_page_number": 53
+  },
+  {
+    "total_token": 34120
+  },
+  {
+    "toc_content": null,
+    "toc_page_list": [],
+    "page_index_given_in_toc": "no"
+  },
+  {
+    "message": "len(group_texts): 2"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'INTRODUCTION', 'physical_index': '<physical_index_1>'}, {'structure': '2', 'title': 'DEFINITIONS', 'physical_index': '<physical_index_1>'}, {'structure': '3', 'title': 'GENERAL', 'physical_index': '<physical_index_4>'}, {'structure': '4', 'title': 'TERMS OF YOUR INVESTMENT', 'physical_index': '<physical_index_5>'}, {'structure': '5', 'title': 'INVESTMENT ROUND', 'physical_index': '<physical_index_9>'}, {'structure': '6', 'title': 'KNOW\u2011YOUR\u2011CUSTOMER (KYC) AND ANTI\u2011MONEY LAUNDERING (AML) POLICY', 'physical_index': '<physical_index_10>'}, {'structure': '7', 'title': 'DEPOSIT AND WITHDRAWAL', 'physical_index': '<physical_index_11>'}, {'structure': '8', 'title': 'INVESTMENT PROCESS', 'physical_index': '<physical_index_12>'}, {'structure': '9', 'title': 'CANCELATION RIGHTS', 'physical_index': '<physical_index_13>'}, {'structure': '10', 'title': 'FORMATION OF PRESCRIBED COMPANY', 'physical_index': '<physical_index_14>'}, {'structure': '11', 'title': 'INVESTMENT RETURNS', 'physical_index': '<physical_index_15>'}, {'structure': '12', 'title': 'PROPERTY MANAGEMENT, VOTING AND MAINTENANCE', 'physical_index': '<physical_index_16>'}, {'structure': '13', 'title': 'ONGOING STATEMENTS AND VALUATIONS', 'physical_index': '<physical_index_17>'}, {'structure': '14', 'title': 'STAKE FEES TO INVESTORS', 'physical_index': '<physical_index_18>'}, {'structure': '15', 'title': 'REPRESENTATIONS', 'physical_index': '<physical_index_19>'}, {'structure': '16', 'title': 'TRANSFERS', 'physical_index': '<physical_index_20>'}, {'structure': '17', 'title': 'TERMINATION AND VARIATION', 'physical_index': '<physical_index_23>'}, {'structure': '18', 'title': 'CONTINGENCY PLANNING', 'physical_index': '<physical_index_23>'}, {'structure': '19', 'title': 'LIMITATION OF LIABILITY', 'physical_index': '<physical_index_24>'}, {'structure': '20', 'title': 'INDEMNITY', 'physical_index': '<physical_index_25>'}, {'structure': '21', 'title': 'REGULATORY DISCLOSURES', 'physical_index': '<physical_index_26>'}, {'structure': '22', 'title': 'FEEDBACK AND COMPLAINTS', 'physical_index': '<physical_index_27>'}, {'structure': '23', 'title': 'GENERAL TERMS', 'physical_index': '<physical_index_28>'}, {'structure': '24', 'title': 'SHARIAH COMPLIANCE', 'physical_index': '<physical_index_29>'}, {'structure': '25', 'title': 'CONTACTS', 'physical_index': '<physical_index_30>'}, {'structure': '26', 'title': 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT', 'physical_index': '<physical_index_32>'}, {'structure': '27', 'title': 'SCHEDULE 1 \u2013 DESCRIPTION OF SERVICES', 'physical_index': '<physical_index_35>'}, {'structure': '28', 'title': 'APPENDIX 2 \u2013 REVISED STANDARD ARTICLES OF ASSOCIATION FOR PRIVATE COMPANIES', 'physical_index': '<physical_index_36>'}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'INTRODUCTION', 'physical_index': 1}, {'structure': '2', 'title': 'DEFINITIONS', 'physical_index': 1}, {'structure': '3', 'title': 'GENERAL', 'physical_index': 4}, {'structure': '4', 'title': 'TERMS OF YOUR INVESTMENT', 'physical_index': 5}, {'structure': '5', 'title': 'INVESTMENT ROUND', 'physical_index': 9}, {'structure': '6', 'title': 'KNOW\u2011YOUR\u2011CUSTOMER (KYC) AND ANTI\u2011MONEY LAUNDERING (AML) POLICY', 'physical_index': 10}, {'structure': '7', 'title': 'DEPOSIT AND WITHDRAWAL', 'physical_index': 11}, {'structure': '8', 'title': 'INVESTMENT PROCESS', 'physical_index': 12}, {'structure': '9', 'title': 'CANCELATION RIGHTS', 'physical_index': 13}, {'structure': '10', 'title': 'FORMATION OF PRESCRIBED COMPANY', 'physical_index': 14}, {'structure': '11', 'title': 'INVESTMENT RETURNS', 'physical_index': 15}, {'structure': '12', 'title': 'PROPERTY MANAGEMENT, VOTING AND MAINTENANCE', 'physical_index': 16}, {'structure': '13', 'title': 'ONGOING STATEMENTS AND VALUATIONS', 'physical_index': 17}, {'structure': '14', 'title': 'STAKE FEES TO INVESTORS', 'physical_index': 18}, {'structure': '15', 'title': 'REPRESENTATIONS', 'physical_index': 19}, {'structure': '16', 'title': 'TRANSFERS', 'physical_index': 20}, {'structure': '17', 'title': 'TERMINATION AND VARIATION', 'physical_index': 23}, {'structure': '18', 'title': 'CONTINGENCY PLANNING', 'physical_index': 23}, {'structure': '19', 'title': 'LIMITATION OF LIABILITY', 'physical_index': 24}, {'structure': '20', 'title': 'INDEMNITY', 'physical_index': 25}, {'structure': '21', 'title': 'REGULATORY DISCLOSURES', 'physical_index': 26}, {'structure': '22', 'title': 'FEEDBACK AND COMPLAINTS', 'physical_index': 27}, {'structure': '23', 'title': 'GENERAL TERMS', 'physical_index': 28}, {'structure': '24', 'title': 'SHARIAH COMPLIANCE', 'physical_index': 29}, {'structure': '25', 'title': 'CONTACTS', 'physical_index': 30}, {'structure': '26', 'title': 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT', 'physical_index': 32}, {'structure': '27', 'title': 'SCHEDULE 1 \u2013 DESCRIPTION OF SERVICES', 'physical_index': 35}, {'structure': '28', 'title': 'APPENDIX 2 \u2013 REVISED STANDARD ARTICLES OF ASSOCIATION FOR PRIVATE COMPANIES', 'physical_index': 36}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0.6071428571428571,
+    "incorrect_results": [
+      {
+        "list_index": 9,
+        "answer": "no",
+        "title": "FORMATION OF PRESCRIBED COMPANY",
+        "page_number": 14
+      },
+      {
+        "list_index": 10,
+        "answer": "no",
+        "title": "INVESTMENT RETURNS",
+        "page_number": 15
+      },
+      {
+        "list_index": 11,
+        "answer": "no",
+        "title": "PROPERTY MANAGEMENT, VOTING AND MAINTENANCE",
+        "page_number": 16
+      },
+      {
+        "list_index": 15,
+        "answer": "no",
+        "title": "TRANSFERS",
+        "page_number": 20
+      },
+      {
+        "list_index": 19,
+        "answer": "no",
+        "title": "INDEMNITY",
+        "page_number": 25
+      },
+      {
+        "list_index": 20,
+        "answer": "no",
+        "title": "REGULATORY DISCLOSURES",
+        "page_number": 26
+      },
+      {
+        "list_index": 21,
+        "answer": "no",
+        "title": "FEEDBACK AND COMPLAINTS",
+        "page_number": 27
+      },
+      {
+        "list_index": 22,
+        "answer": "no",
+        "title": "GENERAL TERMS",
+        "page_number": 28
+      },
+      {
+        "list_index": 23,
+        "answer": "no",
+        "title": "SHARIAH COMPLIANCE",
+        "page_number": 29
+      },
+      {
+        "list_index": 24,
+        "answer": "no",
+        "title": "CONTACTS",
+        "page_number": 30
+      },
+      {
+        "list_index": 25,
+        "answer": "no",
+        "title": "APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT",
+        "page_number": 32
+      }
+    ]
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 9, 'title': 'FORMATION OF PRESCRIBED COMPANY', 'prev_correct': 13, 'next_correct': 17}, {'list_index': 10, 'title': 'INVESTMENT RETURNS', 'prev_correct': 13, 'next_correct': 17}, {'list_index': 11, 'title': 'PROPERTY MANAGEMENT, VOTING AND MAINTENANCE', 'prev_correct': 13, 'next_correct': 17}, {'list_index': 15, 'title': 'TRANSFERS', 'prev_correct': 19, 'next_correct': 23}, {'list_index': 19, 'title': 'INDEMNITY', 'prev_correct': 24, 'next_correct': 35}, {'list_index': 20, 'title': 'REGULATORY DISCLOSURES', 'prev_correct': 24, 'next_correct': 35}, {'list_index': 21, 'title': 'FEEDBACK AND COMPLAINTS', 'prev_correct': 24, 'next_correct': 35}, {'list_index': 22, 'title': 'GENERAL TERMS', 'prev_correct': 24, 'next_correct': 35}, {'list_index': 23, 'title': 'SHARIAH COMPLIANCE', 'prev_correct': 24, 'next_correct': 35}, {'list_index': 24, 'title': 'CONTACTS', 'prev_correct': 24, 'next_correct': 35}, {'list_index': 25, 'title': 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT', 'prev_correct': 24, 'next_correct': 35}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 34, 'title': 'INDEMNITY', 'physical_index': 24}, {'list_index': 34, 'title': 'REGULATORY DISCLOSURES', 'physical_index': 24}, {'list_index': 34, 'title': 'FEEDBACK AND COMPLAINTS', 'physical_index': 25}, {'list_index': 34, 'title': 'GENERAL TERMS', 'physical_index': 26}, {'list_index': 34, 'title': 'SHARIAH COMPLIANCE', 'physical_index': 26}, {'list_index': 34, 'title': 'CONTACTS', 'physical_index': 27}, {'list_index': 34, 'title': 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT', 'physical_index': 28}]"
+  },
+  {
+    "message": "incorrect_results_and_range_logs: []"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 34, 'title': 'INDEMNITY', 'physical_index': 24}, {'list_index': 34, 'title': 'REGULATORY DISCLOSURES', 'physical_index': 24}, {'list_index': 34, 'title': 'FEEDBACK AND COMPLAINTS', 'physical_index': 25}, {'list_index': 34, 'title': 'GENERAL TERMS', 'physical_index': 26}, {'list_index': 34, 'title': 'SHARIAH COMPLIANCE', 'physical_index': 26}, {'list_index': 34, 'title': 'CONTACTS', 'physical_index': 27}, {'list_index': 34, 'title': 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT', 'physical_index': 28}]"
+  },
+  {
+    "message": "incorrect_results_and_range_logs: []"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 34, 'title': 'INDEMNITY', 'physical_index': 24}, {'list_index': 34, 'title': 'REGULATORY DISCLOSURES', 'physical_index': 24}, {'list_index': 34, 'title': 'FEEDBACK AND COMPLAINTS', 'physical_index': 25}, {'list_index': 34, 'title': 'GENERAL TERMS', 'physical_index': 26}, {'list_index': 34, 'title': 'SHARIAH COMPLIANCE', 'physical_index': 26}, {'list_index': 34, 'title': 'CONTACTS', 'physical_index': 27}, {'list_index': 34, 'title': 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT', 'physical_index': 28}]"
+  },
+  {
+    "message": "Maximum fix attempts reached"
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with 'Terms and Conditions' and a version line before the line that contains '1. INTRODUCTION'. Since there is other content preceding the INTRODUCTION section, it does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with other headings and content such as 'Terms and Conditions', a version line, and '1. INTRODUCTION' before any appearance of the word 'DEFINITIONS'. The section titled 'DEFINITIONS' appears later as part of '2. DEFINITIONS', so it does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with a series of definitions (2.54 to 2.63) before the line that contains the section title. The title 'GENERAL' appears later as part of '3. GENERAL', indicating that there is preceding content. Therefore, the 'GENERAL' section does not start at the very beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with various clauses (e.g., Stake information, sections 3.4, 3.5, 3.6, 3.7) before the line '4. TERMS OF YOUR INVESTMENT'. Since there is content preceding the section title, it does not start at the very beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with the sentence 'Investment for the full Investment Term...' and continues with numbered clauses (4.3.9, 4.3.10, etc.). There is no occurrence of the exact section title 'INVESTMENT ROUND' at the very start of the text, nor any heading that matches it before other content. Therefore, the section does not start at the beginning of the given page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with content from sections 4.3.19 through 5.3 before the line containing the section title. Although a fuzzy match for the title is found later in the text (\"6. KNOW -YOUR -CUSTOMER (KYC) AND ANTI -MONEY LAUNDERING (AML) POLICY\"), it is not the first content, so the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with introductory content about the Stake Account and other sentences before the line '7. DEPOSIT AND WITHDRAWAL'. Since there is content preceding the section title, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with clause 7 content about insolvency and client money, and only later contains the line '8. INVESTMENT PROCESS'. Since there is substantial text before the section title, the 'INVESTMENT PROCESS' section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with clauses 8.3 through 8.6 and other preceding material before any occurrence of the title. The phrase \"CANCELATION RIGHTS\" appears later, prefixed by \"9.\", indicating the start of that section, but it is not the first content in the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with content about funding target and other sections like 10.3, 10.4, 11. INVESTMENT RETURNS, etc. There is no occurrence of the title 'FORMATION OF PRESCRIBED COMPANY.' at the very start, nor does any text before it match that title. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with the heading '12. PROPERTY MANAGEMENT, VOTING AND MAINTENANCE' and contains no occurrence of the title 'INVESTMENT RETURNS' at the start. Therefore, the section titled INVESTMENT RETURNS does not start at the beginning of the given page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with content about initiating a legal process and voting procedures, not with the section title 'PROPERTY MANAGEMENT, VOTING AND MAINTENANCE.' Since the title does not appear as the first content (or even near the start) in the provided text, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with clause 12.7.3 and contains extensive content before the section title appears. The title 'ONGOING STATUSES AND VALUATIONS' (appearing as '13. ONGOING STATEMENTS AND VALUATIONS') is near the end of the text, not the first content, so the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with sections 13.1 and 13.2 and their content before any occurrence of the title. The title 'STAKE FEES TO INVESTORS' (appearing as '14. STAKE FEES TO INVESTORS') is preceded by earlier clauses, so it is not at the very start of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with clauses 14.5 through 14.9 and other preceding content before the line '15. REPRESENTATIONS'. Since there is content before the section title, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with numbered clauses (e.g., 15.1.11.) and does not show a heading or title matching 'TRANSFERS' at the very start. Since the title is not present as the first content, the section does not start at the beginning of the provided text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with the heading '12. PROPERTY MANAGEMENT, VOTING AND MAINTENANCE' and contains no occurrence of the title 'TERMINATION AND VARIATION' at its start. Therefore, the given section does not start at the beginning of the provided page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with content from section 17 (TERMINATION AND VARIATION) and only later includes the heading for section 18, which is labeled 'CONTIGENCY PLANNING' (a slight typo of the given title). Since there is preceding material before the CONTINGENCY PLANNING section, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with whitespace followed by '19. LIMITATION OF LIABILITY'. The section title we are looking for is 'LIMITATION OF LIABILITY'. While the title text appears, it is preceded by the clause number '19.' which is not just whitespace, so the title is not the very first content in the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with advisory content and sections 21.x and 22.x. There is no occurrence of the title 'INDEMNITY' at the very start (or anywhere) of the provided text, indicating that the INDEMNITY section does not start at the beginning.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with '23. GENERAL TERMS' and contains sections 23 and 24, but there is no occurrence of the title 'REGULATORY DISCLOSURES' at the start (or anywhere) of the provided text. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with content about Islamic Shariah and then a '25. CONTACTS' section, with no occurrence of the title 'FEEDBACK AND COMPLAINTS' at the start (or anywhere). Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with '(iii) You have failed ...' and contains clauses and sections like 15.4, 15.5, 16, etc. There is no occurrence of the title 'GENERAL TERMS' at the very start, nor any preceding content that matches that title. Therefore, the section does not start at the beginning of the given page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with clause (f) and continues with definitions and other sections. There is no occurrence of the title 'SHARIAH COMPLIANCE' at the very start, nor does the text start with that heading. Therefore, the section does not start at the beginning of the provided page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The provided page_text starts with numbered clauses and content related to an Administration Agreement, such as '1.5 Acting in good faith...' and various sections like TERM AND TERMINATION, COMPANY OBLIGATIONS, etc. There is no occurrence of the title 'CONTACTS' at the very beginning, nor does it appear anywhere in the excerpt. Therefore, the section titled CONTACTS does not start at the beginning of the given page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with clause numbering (7.1.) and content of the Administration Agreement, but there is no occurrence of the section title 'APPENDIX 1 \u2013 ADMINISTRATION AGREEMENT.' at the very beginning. Therefore, the section does not start at the beginning of the given page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with whitespace followed by 'Schedule 1' and then 'DESCRIPTION OF SERVICES' on the next line. Ignoring whitespace and line breaks, this matches the given section title 'SCHEDULE 1 \u2013 DESCRIPTION OF SERVICES' (case\u2011insensitive, spaces and punctuation can be fuzzy). There is no other substantive content before these headings, so the section starts at the beginning of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins (ignoring leading whitespace and case differences) with \"APPENDIX 2 \u2013 Revised Standard Articles of Association For Private Companies\", which matches the given section title \"APPENDIX 2 \u2013 REVISED STANDARD ARTICLES OF ASSOCIATION FOR PRIVATE COMPANIES\". No other content precedes this title, so the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  }
+]

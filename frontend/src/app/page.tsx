@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Sidebar from '@/components/Sidebar';
 import ChatArea from '@/components/ChatArea';
 import UploadModal from '@/components/UploadModal';
+import TreeViewer from '@/components/TreeViewer';
 
 interface DocInfo {
     doc_id: string;
@@ -30,6 +31,12 @@ export default function Home() {
     const [showUpload, setShowUpload] = useState(false);
     const [isThinking, setIsThinking] = useState(false);
     const [chatStats, setChatStats] = useState({ totalTokens: 0, totalTime: 0 });
+
+    // Tree Viewer states
+    const [showTreeViewer, setShowTreeViewer] = useState(false);
+    const [treeData, setTreeData] = useState<any[] | null>(null);
+    const [isLoadingTree, setIsLoadingTree] = useState(false);
+
     const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     // Fetch existing documents on load
@@ -141,19 +148,39 @@ export default function Home() {
         }
     };
 
-    const handleSelectDoc = (doc: DocInfo) => {
+    const handleSelectDoc = async (doc: DocInfo) => {
         if (activeDoc?.doc_id === doc.doc_id) return; // Prevent unnecessary re-renders
 
         setActiveDoc(doc);
         setMessages([]);
         setChatStats({ totalTokens: 0, totalTime: 0 });
         if (doc.status === 'completed') {
-            setMessages([
-                {
-                    role: 'bot',
-                    content: `**${doc.doc_name}** is loaded and ready.\n\nWhat would you like to know about this document?`,
-                },
-            ]);
+            const initialMsg: Message = {
+                role: 'bot',
+                content: `**${doc.doc_name}** is loaded and ready.\n\nWhat would you like to know about this document?`,
+            };
+            setMessages([initialMsg]);
+
+            try {
+                const res = await fetch(`/api/chat/history/${doc.doc_id}`);
+                if (res.ok) {
+                    const history: Message[] = await res.json();
+                    if (history && history.length > 0) {
+                        setMessages([initialMsg, ...history]);
+                        let tTokens = 0;
+                        let tTime = 0;
+                        history.forEach(msg => {
+                            if (msg.role === 'bot') {
+                                tTokens += msg.tokens || 0;
+                                tTime += msg.time || 0;
+                            }
+                        });
+                        setChatStats({ totalTokens: tTokens, totalTime: Math.round(tTime * 100) / 100 });
+                    }
+                }
+            } catch (err) {
+                console.error("Failed to fetch chat history:", err);
+            }
         } else if (doc.status === 'processing') {
             setMessages([
                 {
@@ -163,6 +190,52 @@ export default function Home() {
             ]);
             if (pollRef.current) clearInterval(pollRef.current);
             pollRef.current = setInterval(() => pollStatus(doc.doc_id), 3000);
+        }
+    };
+
+    const handleViewDoc = (docId: string) => {
+        window.open(`/api/documents/${docId}/view`, '_blank');
+    };
+
+    const handleViewTree = async () => {
+        if (!activeDoc) return;
+        setIsLoadingTree(true);
+        try {
+            const res = await fetch(`/api/documents/${activeDoc.doc_id}/tree`);
+            if (res.ok) {
+                const data = await res.json();
+                setTreeData(data.result);
+                setShowTreeViewer(true);
+            } else {
+                alert('Failed to load document structure tree');
+            }
+        } catch (err) {
+            console.error('Tree loading error:', err);
+            alert('Error loading document structure');
+        } finally {
+            setIsLoadingTree(false);
+        }
+    };
+
+    const handleDeleteDoc = async (docId: string) => {
+        if (!confirm('Are you sure you want to delete this document and its chat history?')) return;
+
+        try {
+            const res = await fetch(`/api/documents/${docId}`, { method: 'DELETE' });
+            if (res.ok) {
+                setDocuments(prev => prev.filter(d => d.doc_id !== docId));
+                if (activeDoc?.doc_id === docId) {
+                    setActiveDoc(null);
+                    setMessages([]);
+                    setChatStats({ totalTokens: 0, totalTime: 0 });
+                    if (pollRef.current) clearInterval(pollRef.current);
+                }
+            } else {
+                alert('Failed to delete document');
+            }
+        } catch (err) {
+            console.error('Delete error:', err);
+            alert('Error deleting document');
         }
     };
 
@@ -179,6 +252,8 @@ export default function Home() {
                 activeDoc={activeDoc}
                 onSelectDoc={handleSelectDoc}
                 onUploadClick={() => setShowUpload(true)}
+                onDeleteDoc={handleDeleteDoc}
+                onViewDoc={handleViewDoc}
                 chatStats={chatStats}
             />
             <ChatArea
@@ -186,12 +261,20 @@ export default function Home() {
                 messages={messages}
                 isThinking={isThinking}
                 onSend={handleSend}
+                onViewTree={handleViewTree}
             />
             {showUpload && (
                 <UploadModal
                     onClose={() => setShowUpload(false)}
                     onUpload={handleUpload}
                     isUploading={isUploading}
+                />
+            )}
+            {showTreeViewer && treeData && (
+                <TreeViewer
+                    treeData={treeData}
+                    onClose={() => setShowTreeViewer(false)}
+                    docName={activeDoc?.doc_name || 'Document'}
                 />
             )}
         </div>

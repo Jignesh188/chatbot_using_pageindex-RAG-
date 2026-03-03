@@ -14,10 +14,12 @@ interface SidebarProps {
     activeDoc: DocInfo | null;
     onSelectDoc: (doc: DocInfo) => void;
     onUploadClick: () => void;
+    onDeleteDoc: (docId: string) => void;
+    onViewDoc: (docId: string) => void;
     chatStats: { totalTokens: number; totalTime: number };
 }
 
-export default function Sidebar({ documents, activeDoc, onSelectDoc, onUploadClick, chatStats }: SidebarProps) {
+export default function Sidebar({ documents, activeDoc, onSelectDoc, onUploadClick, onDeleteDoc, onViewDoc, chatStats }: SidebarProps) {
     return (
         <div className="w-[300px] min-w-[300px] bg-gray-50 border-r border-gray-200 flex flex-col h-screen transition-all">
             {/* Header */}
@@ -67,14 +69,14 @@ export default function Sidebar({ documents, activeDoc, onSelectDoc, onUploadCli
                                 key={doc.doc_id}
                                 onClick={() => onSelectDoc(doc)}
                                 className={`group flex items-center gap-3 px-3 py-3 rounded-xl cursor-pointer transition-all duration-200 ${isActive
-                                        ? 'bg-white shadow-sm border border-gray-200'
-                                        : 'hover:bg-white border border-transparent hover:border-gray-200'
+                                    ? 'bg-white shadow-sm border border-gray-200'
+                                    : 'hover:bg-white border border-transparent hover:border-gray-200'
                                     }`}
                             >
                                 <div
                                     className={`w-9 h-9 rounded-lg flex items-center justify-center text-sm shrink-0 transition-colors ${isActive
-                                            ? 'bg-navy-50 text-navy'
-                                            : 'bg-gray-100 text-gray-400 group-hover:bg-gray-100 group-hover:text-gray-600'
+                                        ? 'bg-navy-50 text-navy'
+                                        : 'bg-gray-100 text-gray-400 group-hover:bg-gray-100 group-hover:text-gray-600'
                                         }`}
                                 >
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -108,6 +110,28 @@ export default function Sidebar({ documents, activeDoc, onSelectDoc, onUploadCli
                                                         : doc.status}
                                         </p>
                                     </div>
+                                </div>
+                                <div className="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity ml-2 shrink-0">
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); onViewDoc(doc.doc_id); }}
+                                        className="p-1.5 text-gray-400 hover:text-navy hover:bg-navy-50 rounded-md transition-colors"
+                                        title="View PDF"
+                                    >
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </button>
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); onDeleteDoc(doc.doc_id); }}
+                                        className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-md transition-colors"
+                                        title="Delete Document"
+                                    >
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         );

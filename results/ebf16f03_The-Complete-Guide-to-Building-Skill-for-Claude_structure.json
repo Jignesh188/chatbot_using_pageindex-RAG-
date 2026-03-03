@@ -1,0 +1,61 @@
+{
+  "doc_name": "ebf16f03_The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
+  "structure": [
+    {
+      "title": "Preface",
+      "start_index": 1,
+      "end_index": 2,
+      "node_id": "0000",
+      "summary": "The partial document is a structured guide titled \u201cThe Complete Guide to Building Skills for Claude.\u201d Its table of contents outlines the key sections, indicating a comprehensive approach to skill development for the Claude platform. The guide begins with an introductory overview, followed by foundational concepts in the \u201cFundamentals\u201d section. It then moves into practical aspects of creating skills, covering \u201cPlanning and Design,\u201d \u201cTesting and Iteration,\u201d and \u201cDistribution and Sharing.\u201d Additional support is provided through \u201cPatterns and Troubleshooting,\u201d and the document concludes with a curated list of \u201cResources and References\u201d for further learning. Overall, the partial document presents a step\u2011by\u2011step framework for designing, refining, and deploying effective Claude skills."
+    },
+    {
+      "title": "Introduction",
+      "start_index": 3,
+      "end_index": 4,
+      "node_id": "0001",
+      "summary": "The excerpt introduces \u201cskills\u201d as packaged instruction folders that teach Claude specific tasks or workflows, enabling repeatable, customized automation without repeatedly re\u2011explaining preferences. It highlights typical use cases such as frontend design generation, research methodology, document styling, and multi\u2011step process orchestration, and notes how skills complement Claude\u2019s native capabilities (code execution, document creation) and MCP integrations.  \n\nThe guide promises a complete walkthrough\u2014from planning and structuring skills, through testing and distribution, to practical patterns for both standalone skills and MCP\u2011enhanced workflows. It outlines learning objectives (technical requirements, design patterns, testing, iteration, distribution) and identifies the intended audience: developers, power users, and teams seeking consistent, standardized Claude behavior.  \n\nTwo learning paths are presented: one for building standalone skills and another for enhancing MCP integrations, sharing the same technical foundations. The expected outcome is the ability to create a functional skill in 15\u201130 minutes using the skill\u2011creator. The document then transitions into Chapter\u202f1: Fundamentals."
+    },
+    {
+      "title": "Fundamentals",
+      "start_index": 4,
+      "end_index": 7,
+      "node_id": "0002",
+      "summary": "The excerpt introduces the concept of a \u201cskill\u201d as a structured folder containing required Markdown instructions (with YAML front\u2011matter) and optional scripts, references, and assets. It outlines core design principles\u2014progressive disclosure (three\u2011level loading to minimize token use), composability (skills must work alongside others), and portability (skills run unchanged across Claude.ai, Claude Code, and the API). The text then relates skills to MCP (connectors), using a kitchen analogy: MCP supplies tools and infrastructure, while skills provide the recipes (workflows and best practices). It contrasts the user experience without skills (confusing, inconsistent, higher support load) versus with skills (automated, consistent, guided interactions). Finally, it signals the next section will cover planning and design."
+    },
+    {
+      "title": "Planning and design",
+      "start_index": 7,
+      "end_index": 14,
+      "node_id": "0003",
+      "summary": "The excerpt is a guide on planning and designing Anthropic \u201cskills.\u201d It begins by stressing the importance of defining 2\u20113 concrete use cases before coding, illustrating a detailed sprint\u2011planning example and prompting the creator to consider user goals, multi\u2011step workflows, required tools, and domain knowledge. It then outlines three common skill categories\u2014Document & Asset Creation, Workflow Automation, and MCP Enhancement\u2014each with real examples and key techniques. The next section defines success criteria, offering quantitative benchmarks (trigger rate, tool\u2011call count, API\u2011error rate) and qualitative goals (no user prompting, consistent results). Technical requirements follow, specifying the required file layout, naming conventions, and the critical YAML front\u2011matter format (name and description fields). Detailed rules for the front\u2011matter (prohibited characters, reserved names) and guidance on writing effective descriptions are provided, with examples of good and bad descriptions. The document then describes how to write the main skill instructions in SKILL.md, offering a template for steps, examples, and troubleshooting, and concludes with best\u2011practice tips such as being specific, including error handling, referencing bundled resources, and using progressive disclosure. The passage ends just before the next chapter on testing and iteration."
+    },
+    {
+      "title": "Testing and iteration",
+      "start_index": 14,
+      "end_index": 18,
+      "node_id": "0004",
+      "summary": "The excerpt outlines Chapter\u202f3, \u201cTesting and iteration,\u201d describing a tiered approach to skill testing\u2014manual testing in Claude.ai, scripted testing in Claude\u202fCode, and programmatic testing via the skills API\u2014along with guidance on choosing the appropriate level of rigor. It emphasizes iterating on a single challenging task first, then expanding coverage, and presents a recommended testing framework divided into triggering tests, functional tests, and performance comparisons. The passage also introduces the \u201cskill\u2011creator\u201d tool for generating, reviewing, and refining SKILL.md files, and details how to iteratively improve skills based on feedback signals such as under\u2011triggering, over\u2011triggering, and execution issues."
+    },
+    {
+      "title": "Distribution and sharing",
+      "start_index": 18,
+      "end_index": 21,
+      "node_id": "0005",
+      "summary": "The excerpt outlines the distribution and sharing model for Claude\u202fAI \u201cskills\u201d as of January\u202f2026. It explains how individual users acquire skills (download, zip, upload via Claude.ai settings or place in the Claude Code directory) and how admins can deploy them organization\u2011wide with automatic updates. It introduces the open \u201cAgent Skills\u201d standard for portable, cross\u2011platform skills, notes platform\u2011specific compatibility tags, and describes API\u2011based skill management (\u202f/v1/skills\u202fendpoint, container.skills parameter, version control, integration with the Claude Agent SDK) versus using skills through the Claude.ai UI. A decision matrix shows when to use the UI (end\u2011user interaction, testing, ad\u2011hoc workflows) versus the API (programmatic, large\u2011scale, automated pipelines). The document then recommends a workflow for publishing skills on GitHub (public repo, clear README, examples), linking them in MCP documentation, and providing installation guides. Finally, it offers guidance on positioning a skill\u2014emphasizing outcome\u2011focused messaging and highlighting the combined value of MCP integration and skills."
+    },
+    {
+      "title": "Patterns and troubleshooting",
+      "start_index": 21,
+      "end_index": 28,
+      "node_id": "0006",
+      "summary": "The excerpt is Chapter\u202f5 of a guide on building and maintaining \u201cskills\u201d that orchestrate MCP (Managed Cloud Platform) tools. It first explains two design mind\u2011sets\u2014problem\u2011first (focus on the user\u2019s outcome) versus tool\u2011first (focus on an already\u2011connected service)\u2014and how each influences skill architecture. It then presents five reusable patterns, each with a typical use case, sample workflow steps and \u201ckey techniques\u201d:\n\n1. **Sequential workflow orchestration** \u2013 ordered multi\u2011step processes with dependencies, validation, and rollback.  \n2. **Multi\u2011MCP coordination** \u2013 linking several MCP services across distinct phases (e.g., design\u2011to\u2011development hand\u2011off).  \n3. **Iterative refinement** \u2013 loops that improve output quality via validation scripts and stop criteria.  \n4. **Context\u2011aware tool selection** \u2013 decision trees that pick the optimal storage or processing tool based on file type, size, etc., with transparent rationale.  \n5. **Domain\u2011specific intelligence** \u2013 embedding specialist logic (e.g., compliance checks) before invoking a tool, plus audit logging.\n\nThe latter half of the chapter is a troubleshooting manual. It lists common errors (missing\u202fSKILL.md, malformed YAML front\u2011matter, invalid skill names), symptoms (skill not loading, over\u2011triggering, MCP call failures, ignored instructions, sluggish performance), and step\u2011by\u2011step fixes or checklists for each. Guidance includes naming conventions, description tuning, negative triggers, MCP connection verification, instruction clarity, and strategies for reducing large\u2011context load (splitting documentation, limiting enabled skills). The section ends with a brief segue to Chapter\u202f6, which contains resources and references."
+    },
+    {
+      "title": "Resources and references",
+      "start_index": 28,
+      "end_index": 33,
+      "node_id": "0007",
+      "summary": "The excerpt is a developer\u2011focused guide for creating Claude \u201cskills.\u201d It lists the primary resources (Best Practices Guide, API reference, MCP docs, Anthropic blog posts) and points to the public GitHub skills repository. It introduces the built\u2011in **skill\u2011creator** tool for generating and reviewing skills, and explains how to get support via Discord and GitHub issues. The document includes three reference sections:  \n\n* **Reference\u202fA \u2013 Quick checklist** that outlines pre\u2011development, in\u2011development, pre\u2011upload, and post\u2011upload validation steps (use\u2011case identification, folder naming, required files, YAML front\u2011matter format, testing, monitoring).  \n* **Reference\u202fB \u2013 YAML front\u2011matter schema** that specifies required fields (name, description) and optional metadata (license, allowed\u2011tools, author, version, tags, etc.), plus security restrictions (no XML tags, no code execution, reserved prefixes).  \n* **Reference\u202fC \u2013 Complete skill examples** linking to production\u2011ready skill templates for document generation, workflow patterns, and partner integrations (Asana, Atlassian, Canva, Figma, Sentry, Zapier, etc.).  \n\nOverall, the passage serves as a consolidated resource hub and checklist for building, validating, and publishing Claude skills."
+    }
+  ]
+}

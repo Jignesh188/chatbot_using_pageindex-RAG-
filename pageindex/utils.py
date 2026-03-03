@@ -90,13 +90,23 @@ def Ollama_API(model, prompt, api_key=OLLAMA_API_KEY, chat_history=None):
                 return "Error"
             
 
-# Create a global semaphore to limit concurrent requests to Ollama
-ollama_semaphore = asyncio.Semaphore(1)
+# Create a dictionary to hold semaphores per event loop to avoid cross-loop errors
+_ollama_semaphores = {}
+
+def get_ollama_semaphore():
+    try:
+        loop = asyncio.get_running_loop()
+        if loop not in _ollama_semaphores:
+            _ollama_semaphores[loop] = asyncio.Semaphore(1)
+        return _ollama_semaphores[loop]
+    except RuntimeError:
+        return asyncio.Semaphore(1)
 
 async def Ollama_API_async(model, prompt, api_key=OLLAMA_API_KEY):
     max_retries = 10
     messages = [{"role": "user", "content": prompt}]
-    async with ollama_semaphore:
+    semaphore = get_ollama_semaphore()
+    async with semaphore:
         for i in range(max_retries):
             try:
                 async with openai.AsyncOpenAI(base_url="http://localhost:11434/v1", api_key=api_key if api_key else "ollama") as client:
