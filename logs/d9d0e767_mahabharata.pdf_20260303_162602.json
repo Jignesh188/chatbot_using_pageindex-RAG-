@@ -1,0 +1,413 @@
+[
+  {
+    "total_page_number": 217
+  },
+  {
+    "total_token": 202714
+  },
+  {
+    "toc_content": " \nMAHABHARATA retold by C. Rajagopalachari  \n(Edited by Jay Mazo, International Gita Society)  \n \nContents  \n \n \n1. Ganapati, the Scribe  \n2. Devavrata  \n3. Bhishma's Vow  \n4. Amba And Bhishma  \n5. Devayani And Kacha  \n6. The Marriage Of Devayani  \n7. Yayati  \n8. Vidura  \n9. Kunti  Devi  \n10. Death Of Pandu  \n11. Bhima  \n12. Karna  \n13. Drona  \n14. The Wax Palace  \n15. The Escape Of The Pandavas  \n16. The Slaying Of Bakasura  \n17. Draupadi's Swayamvaram  \n18. Indraprastha  \n19. The Saranga Birds  \n20. Jarasandha  \n21. The Slaying Of Jarasandha  \n22. The Firs t Honor  \n23. Sakuni Comes In  \n24. The Invitation  \n25. The Wager  \n26. Draupadi's Grief  \n27. Dhritarashtra's Anxiety  \n28. Krishna's Vow  \n29. Pasupata  \n30. Affliction Is Nothing New  \n31. Agastya  \n32. Rishyasringa  \n33. Fruitless Penance  \n34. Yavakrida's End  \n35. Mere Learn ing Is Not Enough  \n36. Ashtavakra  \n37. Bhima And Hanuman  \n38. I am No Crane  \n 39. The Wicked Are Never Satisfied  \n40. Duryodhana Disgraced  \n41. Sri Krishna's Hunger  \n42. The Enchanted Pool  \n43. Domestic Service  \n44. Virtue Vindicated  \n45. Matsya Defended  \n46. Prince Uttara  \n47. Promise Fulfilled  \n48. Virata's Delusion  \n49. Taking Counsel  \n50. Arjuna's Charioteer  \n51. Salya Against His Nephews  \n52. Vritra  \n53. Nahusha  \n54. Sanjaya's Mission  \n55. Not a Needle -Point Of Territory  \n56. Krishna's Mission  \n57. Attachment and Duty  \n58. T he Pandava Generalissimo  \n59. Balarama  \n60. Rukmini  \n61. Non -Cooperation  \n62. Krishna Teaches  \n63. Yudhishthira Seeks Benediction  \n64. The First Day's Battle  \n65. The Second Day  \n66. The Third Day's Battle  \n67. The Fourth Day  \n68. The Fifth Day  \n69. The Sixth Day  \n70. The Seventh Day  \n71. The Eighth Day  \n72. The Ninth Day  \n73. The Passing Of Bhishma  \n74. Karna and the Grandsire  \n75. Drona in Command  \n76. To Seize Yudhishthira Alive  \n77. The Twelfth Day  \n78. Brave Bhagadatta  79. Abhimanyu  \n80. The Death Of Abhimanyu  \n81. A Father 's Grief  \n82. The Sindhu King  \n83. Borrowed Armor  \n84. Yudhishthira's Misgivings  \n85. Yudhishthira's Fond Hope  \n86. Karna And Bhima  \n87. Pledge Respected  \n88. Somadatta's End  \n89. Jayadratha Slain  \n90. Drona Passes Away  \n91. The Death Of Karna  \n92. Duryodhana  \n93. The  Pandavas Reproached  \n94. Aswatthama  \n95. Avenged  \n96. Who Can Give Solace?  \n97. Yudhishthira's Anguish  \n98. Yudhishthira Comforted  \n99. Envy  \n100. Utanga  \n101. A Pound Of Flour  \n102. Yudhishthira Rules  \n103. Dhritarashtra  \n104. The Passing Away Of The Three  \n105. Kri shna Passes Away  \n106. Yudhishthira's Final Trial  ",
+    "toc_page_list": [
+      0,
+      1
+    ],
+    "page_index_given_in_toc": "yes"
+  },
+  {
+    "message": "toc_with_page_number: [{'structure': '1', 'title': 'Ganapati, the Scribe', 'page': None}, {'structure': '2', 'title': 'Devavrata', 'page': None}, {'structure': '3', 'title': \"Bhishma's Vow\", 'page': None}, {'structure': '4', 'title': 'Amba And Bhishma', 'page': None}, {'structure': '5', 'title': 'Devayani And Kacha', 'page': None}, {'structure': '6', 'title': 'The Marriage Of Devayani', 'page': None}, {'structure': '7', 'title': 'Yayati', 'page': None}, {'structure': '8', 'title': 'Vidura', 'page': None}, {'structure': '9', 'title': 'Kunti Devi', 'page': None}, {'structure': '10', 'title': 'Death Of Pandu', 'page': None}, {'structure': '11', 'title': 'Bhima', 'page': None}, {'structure': '12', 'title': 'Karna', 'page': None}, {'structure': '13', 'title': 'Drona', 'page': None}, {'structure': '14', 'title': 'The Wax Palace', 'page': None}, {'structure': '15', 'title': 'The Escape Of The Pandavas', 'page': None}, {'structure': '16', 'title': 'The Slaying Of Bakasura', 'page': None}, {'structure': '17', 'title': \"Draupadi's Swayamvaram\", 'page': None}, {'structure': '18', 'title': 'Indraprastha', 'page': None}, {'structure': '19', 'title': 'The Saranga Birds', 'page': None}, {'structure': '20', 'title': 'Jarasandha', 'page': None}, {'structure': '21', 'title': 'The Slaying Of Jarasandha', 'page': None}, {'structure': '22', 'title': 'The Firs t Honor', 'page': None}, {'structure': '23', 'title': 'Sakuni Comes In', 'page': None}, {'structure': '24', 'title': 'The Invitation', 'page': None}, {'structure': '25', 'title': 'The Wager', 'page': None}, {'structure': '26', 'title': \"Draupadi's Grief\", 'page': None}, {'structure': '27', 'title': \"Dhritarashtra's Anxiety\", 'page': None}, {'structure': '28', 'title': \"Krishna's Vow\", 'page': None}, {'structure': '29', 'title': 'Pasupata', 'page': None}, {'structure': '30', 'title': 'Affliction Is Nothing New', 'page': None}, {'structure': '31', 'title': 'Agastya', 'page': None}, {'structure': '32', 'title': 'Rishyasringa', 'page': None}, {'structure': '33', 'title': 'Fruitless Penance', 'page': None}, {'structure': '34', 'title': \"Yavakrida's End\", 'page': None}, {'structure': '35', 'title': 'Mere Learn ing Is Not Enough', 'page': None}, {'structure': '36', 'title': 'Ashtavakra', 'page': None}, {'structure': '37', 'title': 'Bhima And Hanuman', 'page': None}, {'structure': '38', 'title': 'I am No Crane', 'page': None}, {'structure': '39', 'title': 'The Wicked Are Never Satisfied', 'page': None}, {'structure': '40', 'title': 'Duryodhana Disgraced', 'page': None}, {'structure': '41', 'title': \"Sri Krishna's Hunger\", 'page': None}, {'structure': '42', 'title': 'The Enchanted Pool', 'page': None}, {'structure': '43', 'title': 'Domestic Service', 'page': None}, {'structure': '44', 'title': 'Virtue Vindicated', 'page': None}, {'structure': '45', 'title': 'Matsya Defended', 'page': None}, {'structure': '46', 'title': 'Prince Uttara', 'page': None}, {'structure': '47', 'title': 'Promise Fulfilled', 'page': None}, {'structure': '48', 'title': \"Virata's Delusion\", 'page': None}, {'structure': '49', 'title': 'Taking Counsel', 'page': None}, {'structure': '50', 'title': \"Arjuna's Charioteer\", 'page': None}, {'structure': '51', 'title': 'Salya Against His Nephews', 'page': None}, {'structure': '52', 'title': 'Vritra', 'page': None}, {'structure': '53', 'title': 'Nahusha', 'page': None}, {'structure': '54', 'title': \"Sanjaya's Mission\", 'page': None}, {'structure': '55', 'title': 'Not a Needle -Point Of Territory', 'page': None}, {'structure': '56', 'title': \"Krishna's Mission\", 'page': None}, {'structure': '57', 'title': 'Attachment and Duty', 'page': None}, {'structure': '58', 'title': 'T he Pandava Generalissimo', 'page': None}, {'structure': '59', 'title': 'Balarama', 'page': None}, {'structure': '60', 'title': 'Rukmini', 'page': None}, {'structure': '61', 'title': 'Non -Cooperation', 'page': None}, {'structure': '62', 'title': 'Krishna Teaches', 'page': None}, {'structure': '63', 'title': 'Yudhishthira Seeks Benediction', 'page': None}, {'structure': '64', 'title': \"The First Day's Battle\", 'page': None}, {'structure': '65', 'title': 'The Second Day', 'page': None}, {'structure': '66', 'title': \"The Third Day's Battle\", 'page': None}, {'structure': '67', 'title': 'The Fourth Day', 'page': None}, {'structure': '68', 'title': 'The Fifth Day', 'page': None}, {'structure': '69', 'title': 'The Sixth Day', 'page': None}, {'structure': '70', 'title': 'The Seventh Day', 'page': None}, {'structure': '71', 'title': 'The Eighth Day', 'page': None}, {'structure': '72', 'title': 'The Ninth Day', 'page': None}, {'structure': '73', 'title': 'The Passing Of Bhishma', 'page': None}, {'structure': '74', 'title': 'Karna and the Grandsire', 'page': None}, {'structure': '75', 'title': 'Drona in Command', 'page': None}, {'structure': '76', 'title': 'To Seize Yudhishthira Alive', 'page': None}, {'structure': '77', 'title': 'The Twelfth Day', 'page': None}, {'structure': '78', 'title': 'Brave Bhagadatta', 'page': None}, {'structure': '79', 'title': 'Abhimanyu', 'page': None}, {'structure': '80', 'title': 'The Death Of Abhimanyu', 'page': None}, {'structure': '81', 'title': \"A Father 's Grief\", 'page': None}, {'structure': '82', 'title': 'The Sindhu King', 'page': None}, {'structure': '83', 'title': 'Borrowed Armor', 'page': None}, {'structure': '84', 'title': \"Yudhishthira's Misgivings\", 'page': None}, {'structure': '85', 'title': \"Yudhishthira's Fond Hope\", 'page': None}, {'structure': '86', 'title': 'Karna And Bhima', 'page': None}, {'structure': '87', 'title': 'Pledge Respected', 'page': None}, {'structure': '88', 'title': \"Somadatta's End\", 'page': None}, {'structure': '89', 'title': 'Jayadratha Slain', 'page': None}, {'structure': '90', 'title': 'Drona Passes Away', 'page': None}, {'structure': '91', 'title': 'The Death Of Karna', 'page': None}, {'structure': '92', 'title': 'Duryodhana', 'page': None}, {'structure': '93', 'title': 'The Pandavas Reproached', 'page': None}, {'structure': '94', 'title': 'Aswatthama', 'page': None}, {'structure': '95', 'title': 'Avenged', 'page': None}, {'structure': '96', 'title': 'Who Can Give Solace?', 'page': None}, {'structure': '97', 'title': \"Yudhishthira's Anguish\", 'page': None}, {'structure': '98', 'title': 'Yudhishthira Comforted', 'page': None}, {'structure': '99', 'title': 'Envy', 'page': None}, {'structure': '100', 'title': 'Utanga', 'page': None}, {'structure': '101', 'title': 'A Pound Of Flour', 'page': None}, {'structure': '102', 'title': 'Yudhishthira Rules', 'page': None}, {'structure': '103', 'title': 'Dhritarashtra', 'page': None}, {'structure': '104', 'title': 'The Passing Away Of The Three', 'page': None}, {'structure': '105', 'title': 'Kri shna Passes Away', 'page': None}, {'structure': '106', 'title': \"Yudhishthira's Final Trial\", 'page': None}]"
+  },
+  {
+    "message": "toc_with_physical_index: [{'structure': '1', 'title': 'Ganapati, the Scribe', 'physical_index': '<physical_index_4>'}, {'structure': '2', 'title': 'Devavrata', 'physical_index': '<physical_index_6>'}, {'structure': '3', 'title': \"Bhishma's Vow\", 'physical_index': '<physical_index_7>'}, {'structure': '4', 'title': 'Amba And Bhishma', 'physical_index': '<physical_index_9>'}, {'structure': '5', 'title': 'Devayani And Kacha', 'physical_index': '<physical_index_11>'}, {'structure': '6', 'title': 'The Marriage Of Devayani', 'physical_index': '<physical_index_12>'}, {'structure': '7', 'title': 'Yayati', 'physical_index': '<physical_index_13>'}, {'structure': '8', 'title': 'Vidura', 'physical_index': '<physical_index_14>'}, {'structure': '9', 'title': 'Kunti Devi', 'physical_index': '<physical_index_15>'}, {'structure': '10', 'title': 'Death Of Pandu', 'physical_index': '<physical_index_16>'}, {'structure': '11', 'title': 'Bhima', 'physical_index': '<physical_index_21>'}]"
+  },
+  {
+    "message": "toc_with_physical_index: [{'structure': '1', 'title': 'Ganapati, the Scribe', 'physical_index': 4}, {'structure': '2', 'title': 'Devavrata', 'physical_index': 6}, {'structure': '3', 'title': \"Bhishma's Vow\", 'physical_index': 7}, {'structure': '4', 'title': 'Amba And Bhishma', 'physical_index': 9}, {'structure': '5', 'title': 'Devayani And Kacha', 'physical_index': 11}, {'structure': '6', 'title': 'The Marriage Of Devayani', 'physical_index': 12}, {'structure': '7', 'title': 'Yayati', 'physical_index': 13}, {'structure': '8', 'title': 'Vidura', 'physical_index': 14}, {'structure': '9', 'title': 'Kunti Devi', 'physical_index': 15}, {'structure': '10', 'title': 'Death Of Pandu', 'physical_index': 16}, {'structure': '11', 'title': 'Bhima', 'physical_index': 21}]"
+  },
+  {
+    "message": "matching_pairs: [{'title': 'Ganapati, the Scribe', 'page': None, 'physical_index': 4}, {'title': 'Devavrata', 'page': None, 'physical_index': 6}, {'title': \"Bhishma's Vow\", 'page': None, 'physical_index': 7}, {'title': 'Amba And Bhishma', 'page': None, 'physical_index': 9}, {'title': 'Devayani And Kacha', 'page': None, 'physical_index': 11}, {'title': 'The Marriage Of Devayani', 'page': None, 'physical_index': 12}, {'title': 'Yayati', 'page': None, 'physical_index': 13}, {'title': 'Vidura', 'page': None, 'physical_index': 14}, {'title': 'Kunti Devi', 'page': None, 'physical_index': 15}, {'title': 'Death Of Pandu', 'page': None, 'physical_index': 16}, {'title': 'Bhima', 'page': None, 'physical_index': 21}]"
+  },
+  {
+    "message": "offset: None"
+  },
+  {
+    "message": "toc_with_page_number: [{'structure': '1', 'title': 'Ganapati, the Scribe', 'page': None}, {'structure': '2', 'title': 'Devavrata', 'page': None}, {'structure': '3', 'title': \"Bhishma's Vow\", 'page': None}, {'structure': '4', 'title': 'Amba And Bhishma', 'page': None}, {'structure': '5', 'title': 'Devayani And Kacha', 'page': None}, {'structure': '6', 'title': 'The Marriage Of Devayani', 'page': None}, {'structure': '7', 'title': 'Yayati', 'page': None}, {'structure': '8', 'title': 'Vidura', 'page': None}, {'structure': '9', 'title': 'Kunti Devi', 'page': None}, {'structure': '10', 'title': 'Death Of Pandu', 'page': None}, {'structure': '11', 'title': 'Bhima', 'page': None}, {'structure': '12', 'title': 'Karna', 'page': None}, {'structure': '13', 'title': 'Drona', 'page': None}, {'structure': '14', 'title': 'The Wax Palace', 'page': None}, {'structure': '15', 'title': 'The Escape Of The Pandavas', 'page': None}, {'structure': '16', 'title': 'The Slaying Of Bakasura', 'page': None}, {'structure': '17', 'title': \"Draupadi's Swayamvaram\", 'page': None}, {'structure': '18', 'title': 'Indraprastha', 'page': None}, {'structure': '19', 'title': 'The Saranga Birds', 'page': None}, {'structure': '20', 'title': 'Jarasandha', 'page': None}, {'structure': '21', 'title': 'The Slaying Of Jarasandha', 'page': None}, {'structure': '22', 'title': 'The Firs t Honor', 'page': None}, {'structure': '23', 'title': 'Sakuni Comes In', 'page': None}, {'structure': '24', 'title': 'The Invitation', 'page': None}, {'structure': '25', 'title': 'The Wager', 'page': None}, {'structure': '26', 'title': \"Draupadi's Grief\", 'page': None}, {'structure': '27', 'title': \"Dhritarashtra's Anxiety\", 'page': None}, {'structure': '28', 'title': \"Krishna's Vow\", 'page': None}, {'structure': '29', 'title': 'Pasupata', 'page': None}, {'structure': '30', 'title': 'Affliction Is Nothing New', 'page': None}, {'structure': '31', 'title': 'Agastya', 'page': None}, {'structure': '32', 'title': 'Rishyasringa', 'page': None}, {'structure': '33', 'title': 'Fruitless Penance', 'page': None}, {'structure': '34', 'title': \"Yavakrida's End\", 'page': None}, {'structure': '35', 'title': 'Mere Learn ing Is Not Enough', 'page': None}, {'structure': '36', 'title': 'Ashtavakra', 'page': None}, {'structure': '37', 'title': 'Bhima And Hanuman', 'page': None}, {'structure': '38', 'title': 'I am No Crane', 'page': None}, {'structure': '39', 'title': 'The Wicked Are Never Satisfied', 'page': None}, {'structure': '40', 'title': 'Duryodhana Disgraced', 'page': None}, {'structure': '41', 'title': \"Sri Krishna's Hunger\", 'page': None}, {'structure': '42', 'title': 'The Enchanted Pool', 'page': None}, {'structure': '43', 'title': 'Domestic Service', 'page': None}, {'structure': '44', 'title': 'Virtue Vindicated', 'page': None}, {'structure': '45', 'title': 'Matsya Defended', 'page': None}, {'structure': '46', 'title': 'Prince Uttara', 'page': None}, {'structure': '47', 'title': 'Promise Fulfilled', 'page': None}, {'structure': '48', 'title': \"Virata's Delusion\", 'page': None}, {'structure': '49', 'title': 'Taking Counsel', 'page': None}, {'structure': '50', 'title': \"Arjuna's Charioteer\", 'page': None}, {'structure': '51', 'title': 'Salya Against His Nephews', 'page': None}, {'structure': '52', 'title': 'Vritra', 'page': None}, {'structure': '53', 'title': 'Nahusha', 'page': None}, {'structure': '54', 'title': \"Sanjaya's Mission\", 'page': None}, {'structure': '55', 'title': 'Not a Needle -Point Of Territory', 'page': None}, {'structure': '56', 'title': \"Krishna's Mission\", 'page': None}, {'structure': '57', 'title': 'Attachment and Duty', 'page': None}, {'structure': '58', 'title': 'T he Pandava Generalissimo', 'page': None}, {'structure': '59', 'title': 'Balarama', 'page': None}, {'structure': '60', 'title': 'Rukmini', 'page': None}, {'structure': '61', 'title': 'Non -Cooperation', 'page': None}, {'structure': '62', 'title': 'Krishna Teaches', 'page': None}, {'structure': '63', 'title': 'Yudhishthira Seeks Benediction', 'page': None}, {'structure': '64', 'title': \"The First Day's Battle\", 'page': None}, {'structure': '65', 'title': 'The Second Day', 'page': None}, {'structure': '66', 'title': \"The Third Day's Battle\", 'page': None}, {'structure': '67', 'title': 'The Fourth Day', 'page': None}, {'structure': '68', 'title': 'The Fifth Day', 'page': None}, {'structure': '69', 'title': 'The Sixth Day', 'page': None}, {'structure': '70', 'title': 'The Seventh Day', 'page': None}, {'structure': '71', 'title': 'The Eighth Day', 'page': None}, {'structure': '72', 'title': 'The Ninth Day', 'page': None}, {'structure': '73', 'title': 'The Passing Of Bhishma', 'page': None}, {'structure': '74', 'title': 'Karna and the Grandsire', 'page': None}, {'structure': '75', 'title': 'Drona in Command', 'page': None}, {'structure': '76', 'title': 'To Seize Yudhishthira Alive', 'page': None}, {'structure': '77', 'title': 'The Twelfth Day', 'page': None}, {'structure': '78', 'title': 'Brave Bhagadatta', 'page': None}, {'structure': '79', 'title': 'Abhimanyu', 'page': None}, {'structure': '80', 'title': 'The Death Of Abhimanyu', 'page': None}, {'structure': '81', 'title': \"A Father 's Grief\", 'page': None}, {'structure': '82', 'title': 'The Sindhu King', 'page': None}, {'structure': '83', 'title': 'Borrowed Armor', 'page': None}, {'structure': '84', 'title': \"Yudhishthira's Misgivings\", 'page': None}, {'structure': '85', 'title': \"Yudhishthira's Fond Hope\", 'page': None}, {'structure': '86', 'title': 'Karna And Bhima', 'page': None}, {'structure': '87', 'title': 'Pledge Respected', 'page': None}, {'structure': '88', 'title': \"Somadatta's End\", 'page': None}, {'structure': '89', 'title': 'Jayadratha Slain', 'page': None}, {'structure': '90', 'title': 'Drona Passes Away', 'page': None}, {'structure': '91', 'title': 'The Death Of Karna', 'page': None}, {'structure': '92', 'title': 'Duryodhana', 'page': None}, {'structure': '93', 'title': 'The Pandavas Reproached', 'page': None}, {'structure': '94', 'title': 'Aswatthama', 'page': None}, {'structure': '95', 'title': 'Avenged', 'page': None}, {'structure': '96', 'title': 'Who Can Give Solace?', 'page': None}, {'structure': '97', 'title': \"Yudhishthira's Anguish\", 'page': None}, {'structure': '98', 'title': 'Yudhishthira Comforted', 'page': None}, {'structure': '99', 'title': 'Envy', 'page': None}, {'structure': '100', 'title': 'Utanga', 'page': None}, {'structure': '101', 'title': 'A Pound Of Flour', 'page': None}, {'structure': '102', 'title': 'Yudhishthira Rules', 'page': None}, {'structure': '103', 'title': 'Dhritarashtra', 'page': None}, {'structure': '104', 'title': 'The Passing Away Of The Three', 'page': None}, {'structure': '105', 'title': 'Kri shna Passes Away', 'page': None}, {'structure': '106', 'title': \"Yudhishthira's Final Trial\", 'page': None}]"
+  },
+  {
+    "message": "toc_with_page_number: [{'structure': '1', 'title': 'Ganapati, the Scribe', 'page': None}, {'structure': '2', 'title': 'Devavrata', 'page': None}, {'structure': '3', 'title': \"Bhishma's Vow\", 'page': None}, {'structure': '4', 'title': 'Amba And Bhishma', 'page': None}, {'structure': '5', 'title': 'Devayani And Kacha', 'page': None}, {'structure': '6', 'title': 'The Marriage Of Devayani', 'page': None}, {'structure': '7', 'title': 'Yayati', 'page': None}, {'structure': '8', 'title': 'Vidura', 'page': None}, {'structure': '9', 'title': 'Kunti Devi', 'page': None}, {'structure': '10', 'title': 'Death Of Pandu', 'page': None}, {'structure': '11', 'title': 'Bhima', 'page': None}, {'structure': '12', 'title': 'Karna', 'page': None}, {'structure': '13', 'title': 'Drona', 'page': None}, {'structure': '14', 'title': 'The Wax Palace', 'page': None}, {'structure': '15', 'title': 'The Escape Of The Pandavas', 'page': None}, {'structure': '16', 'title': 'The Slaying Of Bakasura', 'page': None}, {'structure': '17', 'title': \"Draupadi's Swayamvaram\", 'page': None}, {'structure': '18', 'title': 'Indraprastha', 'page': None}, {'structure': '19', 'title': 'The Saranga Birds', 'page': None}, {'structure': '20', 'title': 'Jarasandha', 'page': None}, {'structure': '21', 'title': 'The Slaying Of Jarasandha', 'page': None}, {'structure': '22', 'title': 'The Firs t Honor', 'page': None}, {'structure': '23', 'title': 'Sakuni Comes In', 'page': None}, {'structure': '24', 'title': 'The Invitation', 'page': None}, {'structure': '25', 'title': 'The Wager', 'page': None}, {'structure': '26', 'title': \"Draupadi's Grief\", 'page': None}, {'structure': '27', 'title': \"Dhritarashtra's Anxiety\", 'page': None}, {'structure': '28', 'title': \"Krishna's Vow\", 'page': None}, {'structure': '29', 'title': 'Pasupata', 'page': None}, {'structure': '30', 'title': 'Affliction Is Nothing New', 'page': None}, {'structure': '31', 'title': 'Agastya', 'page': None}, {'structure': '32', 'title': 'Rishyasringa', 'page': None}, {'structure': '33', 'title': 'Fruitless Penance', 'page': None}, {'structure': '34', 'title': \"Yavakrida's End\", 'page': None}, {'structure': '35', 'title': 'Mere Learn ing Is Not Enough', 'page': None}, {'structure': '36', 'title': 'Ashtavakra', 'page': None}, {'structure': '37', 'title': 'Bhima And Hanuman', 'page': None}, {'structure': '38', 'title': 'I am No Crane', 'page': None}, {'structure': '39', 'title': 'The Wicked Are Never Satisfied', 'page': None}, {'structure': '40', 'title': 'Duryodhana Disgraced', 'page': None}, {'structure': '41', 'title': \"Sri Krishna's Hunger\", 'page': None}, {'structure': '42', 'title': 'The Enchanted Pool', 'page': None}, {'structure': '43', 'title': 'Domestic Service', 'page': None}, {'structure': '44', 'title': 'Virtue Vindicated', 'page': None}, {'structure': '45', 'title': 'Matsya Defended', 'page': None}, {'structure': '46', 'title': 'Prince Uttara', 'page': None}, {'structure': '47', 'title': 'Promise Fulfilled', 'page': None}, {'structure': '48', 'title': \"Virata's Delusion\", 'page': None}, {'structure': '49', 'title': 'Taking Counsel', 'page': None}, {'structure': '50', 'title': \"Arjuna's Charioteer\", 'page': None}, {'structure': '51', 'title': 'Salya Against His Nephews', 'page': None}, {'structure': '52', 'title': 'Vritra', 'page': None}, {'structure': '53', 'title': 'Nahusha', 'page': None}, {'structure': '54', 'title': \"Sanjaya's Mission\", 'page': None}, {'structure': '55', 'title': 'Not a Needle -Point Of Territory', 'page': None}, {'structure': '56', 'title': \"Krishna's Mission\", 'page': None}, {'structure': '57', 'title': 'Attachment and Duty', 'page': None}, {'structure': '58', 'title': 'T he Pandava Generalissimo', 'page': None}, {'structure': '59', 'title': 'Balarama', 'page': None}, {'structure': '60', 'title': 'Rukmini', 'page': None}, {'structure': '61', 'title': 'Non -Cooperation', 'page': None}, {'structure': '62', 'title': 'Krishna Teaches', 'page': None}, {'structure': '63', 'title': 'Yudhishthira Seeks Benediction', 'page': None}, {'structure': '64', 'title': \"The First Day's Battle\", 'page': None}, {'structure': '65', 'title': 'The Second Day', 'page': None}, {'structure': '66', 'title': \"The Third Day's Battle\", 'page': None}, {'structure': '67', 'title': 'The Fourth Day', 'page': None}, {'structure': '68', 'title': 'The Fifth Day', 'page': None}, {'structure': '69', 'title': 'The Sixth Day', 'page': None}, {'structure': '70', 'title': 'The Seventh Day', 'page': None}, {'structure': '71', 'title': 'The Eighth Day', 'page': None}, {'structure': '72', 'title': 'The Ninth Day', 'page': None}, {'structure': '73', 'title': 'The Passing Of Bhishma', 'page': None}, {'structure': '74', 'title': 'Karna and the Grandsire', 'page': None}, {'structure': '75', 'title': 'Drona in Command', 'page': None}, {'structure': '76', 'title': 'To Seize Yudhishthira Alive', 'page': None}, {'structure': '77', 'title': 'The Twelfth Day', 'page': None}, {'structure': '78', 'title': 'Brave Bhagadatta', 'page': None}, {'structure': '79', 'title': 'Abhimanyu', 'page': None}, {'structure': '80', 'title': 'The Death Of Abhimanyu', 'page': None}, {'structure': '81', 'title': \"A Father 's Grief\", 'page': None}, {'structure': '82', 'title': 'The Sindhu King', 'page': None}, {'structure': '83', 'title': 'Borrowed Armor', 'page': None}, {'structure': '84', 'title': \"Yudhishthira's Misgivings\", 'page': None}, {'structure': '85', 'title': \"Yudhishthira's Fond Hope\", 'page': None}, {'structure': '86', 'title': 'Karna And Bhima', 'page': None}, {'structure': '87', 'title': 'Pledge Respected', 'page': None}, {'structure': '88', 'title': \"Somadatta's End\", 'page': None}, {'structure': '89', 'title': 'Jayadratha Slain', 'page': None}, {'structure': '90', 'title': 'Drona Passes Away', 'page': None}, {'structure': '91', 'title': 'The Death Of Karna', 'page': None}, {'structure': '92', 'title': 'Duryodhana', 'page': None}, {'structure': '93', 'title': 'The Pandavas Reproached', 'page': None}, {'structure': '94', 'title': 'Aswatthama', 'page': None}, {'structure': '95', 'title': 'Avenged', 'page': None}, {'structure': '96', 'title': 'Who Can Give Solace?', 'page': None}, {'structure': '97', 'title': \"Yudhishthira's Anguish\", 'page': None}, {'structure': '98', 'title': 'Yudhishthira Comforted', 'page': None}, {'structure': '99', 'title': 'Envy', 'page': None}, {'structure': '100', 'title': 'Utanga', 'page': None}, {'structure': '101', 'title': 'A Pound Of Flour', 'page': None}, {'structure': '102', 'title': 'Yudhishthira Rules', 'page': None}, {'structure': '103', 'title': 'Dhritarashtra', 'page': None}, {'structure': '104', 'title': 'The Passing Away Of The Three', 'page': None}, {'structure': '105', 'title': 'Kri shna Passes Away', 'page': None}, {'structure': '106', 'title': \"Yudhishthira's Final Trial\", 'page': None}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0,
+    "incorrect_results": []
+  },
+  {
+    "message": "toc_transformer: [{'structure': '1', 'title': 'Ganapati, the Scribe', 'page': None}, {'structure': '2', 'title': 'Devavrata', 'page': None}, {'structure': '3', 'title': \"Bhishma's Vow\", 'page': None}, {'structure': '4', 'title': 'Amba And Bhishma', 'page': None}, {'structure': '5', 'title': 'Devayani And Kacha', 'page': None}, {'structure': '6', 'title': 'The Marriage Of Devayani', 'page': None}, {'structure': '7', 'title': 'Yayati', 'page': None}, {'structure': '8', 'title': 'Vidura', 'page': None}, {'structure': '9', 'title': 'Kunti Devi', 'page': None}, {'structure': '10', 'title': 'Death Of Pandu', 'page': None}, {'structure': '11', 'title': 'Bhima', 'page': None}, {'structure': '12', 'title': 'Karna', 'page': None}, {'structure': '13', 'title': 'Drona', 'page': None}, {'structure': '14', 'title': 'The Wax Palace', 'page': None}, {'structure': '15', 'title': 'The Escape Of The Pandavas', 'page': None}, {'structure': '16', 'title': 'The Slaying Of Bakasura', 'page': None}, {'structure': '17', 'title': \"Draupadi's Swayamvaram\", 'page': None}, {'structure': '18', 'title': 'Indraprastha', 'page': None}, {'structure': '19', 'title': 'The Saranga Birds', 'page': None}, {'structure': '20', 'title': 'Jarasandha', 'page': None}, {'structure': '21', 'title': 'The Slaying Of Jarasandha', 'page': None}, {'structure': '22', 'title': 'The Firs t Honor', 'page': None}, {'structure': '23', 'title': 'Sakuni Comes In', 'page': None}, {'structure': '24', 'title': 'The Invitation', 'page': None}, {'structure': '25', 'title': 'The Wager', 'page': None}, {'structure': '26', 'title': \"Draupadi's Grief\", 'page': None}, {'structure': '27', 'title': \"Dhritarashtra's Anxiety\", 'page': None}, {'structure': '28', 'title': \"Krishna's Vow\", 'page': None}, {'structure': '29', 'title': 'Pasupata', 'page': None}, {'structure': '30', 'title': 'Affliction Is Nothing New', 'page': None}, {'structure': '31', 'title': 'Agastya', 'page': None}, {'structure': '32', 'title': 'Rishyasringa', 'page': None}, {'structure': '33', 'title': 'Fruitless Penance', 'page': None}, {'structure': '34', 'title': \"Yavakrida's End\", 'page': None}, {'structure': '35', 'title': 'Mere Learn ing Is Not Enough', 'page': None}, {'structure': '36', 'title': 'Ashtavakra', 'page': None}, {'structure': '37', 'title': 'Bhima And Hanuman', 'page': None}, {'structure': '38', 'title': 'I am No Crane', 'page': None}, {'structure': '39', 'title': 'The Wicked Are Never Satisfied', 'page': None}, {'structure': '40', 'title': 'Duryodhana Disgraced', 'page': None}, {'structure': '41', 'title': \"Sri Krishna's Hunger\", 'page': None}, {'structure': '42', 'title': 'The Enchanted Pool', 'page': None}, {'structure': '43', 'title': 'Domestic Service', 'page': None}, {'structure': '44', 'title': 'Virtue Vindicated', 'page': None}, {'structure': '45', 'title': 'Matsya Defended', 'page': None}, {'structure': '46', 'title': 'Prince Uttara', 'page': None}, {'structure': '47', 'title': 'Promise Fulfilled', 'page': None}, {'structure': '48', 'title': \"Virata's Delusion\", 'page': None}, {'structure': '49', 'title': 'Taking Counsel', 'page': None}, {'structure': '50', 'title': \"Arjuna's Charioteer\", 'page': None}, {'structure': '51', 'title': 'Salya Against His Nephews', 'page': None}, {'structure': '52', 'title': 'Vritra', 'page': None}, {'structure': '53', 'title': 'Nahusha', 'page': None}, {'structure': '54', 'title': \"Sanjaya's Mission\", 'page': None}, {'structure': '55', 'title': 'Not a Needle -Point Of Territory', 'page': None}, {'structure': '56', 'title': \"Krishna's Mission\", 'page': None}, {'structure': '57', 'title': 'Attachment and Duty', 'page': None}, {'structure': '58', 'title': 'T he Pandava Generalissimo', 'page': None}, {'structure': '59', 'title': 'Balarama', 'page': None}, {'structure': '60', 'title': 'Rukmini', 'page': None}, {'structure': '61', 'title': 'Non -Cooperation', 'page': None}, {'structure': '62', 'title': 'Krishna Teaches', 'page': None}, {'structure': '63', 'title': 'Yudhishthira Seeks Benediction', 'page': None}, {'structure': '64', 'title': \"The First Day's Battle\", 'page': None}, {'structure': '65', 'title': 'The Second Day', 'page': None}, {'structure': '66', 'title': \"The Third Day's Battle\", 'page': None}, {'structure': '67', 'title': 'The Fourth Day', 'page': None}, {'structure': '68', 'title': 'The Fifth Day', 'page': None}, {'structure': '69', 'title': 'The Sixth Day', 'page': None}, {'structure': '70', 'title': 'The Seventh Day', 'page': None}, {'structure': '71', 'title': 'The Eighth Day', 'page': None}, {'structure': '72', 'title': 'The Ninth Day', 'page': None}, {'structure': '73', 'title': 'The Passing Of Bhishma', 'page': None}, {'structure': '74', 'title': 'Karna and the Grandsire', 'page': None}, {'structure': '75', 'title': 'Drona in Command', 'page': None}, {'structure': '76', 'title': 'To Seize Yudhishthira Alive', 'page': None}, {'structure': '77', 'title': 'The Twelfth Day', 'page': None}, {'structure': '78', 'title': 'Brave Bhagadatta', 'page': None}, {'structure': '79', 'title': 'Abhimanyu', 'page': None}, {'structure': '80', 'title': 'The Death Of Abhimanyu', 'page': None}, {'structure': '81', 'title': \"A Father 's Grief\", 'page': None}, {'structure': '82', 'title': 'The Sindhu King', 'page': None}, {'structure': '83', 'title': 'Borrowed Armor', 'page': None}, {'structure': '84', 'title': \"Yudhishthira's Misgivings\", 'page': None}, {'structure': '85', 'title': \"Yudhishthira's Fond Hope\", 'page': None}, {'structure': '86', 'title': 'Karna And Bhima', 'page': None}, {'structure': '87', 'title': 'Pledge Respected', 'page': None}, {'structure': '88', 'title': \"Somadatta's End\", 'page': None}, {'structure': '89', 'title': 'Jayadratha Slain', 'page': None}, {'structure': '90', 'title': 'Drona Passes Away', 'page': None}, {'structure': '91', 'title': 'The Death Of Karna', 'page': None}, {'structure': '92', 'title': 'Duryodhana', 'page': None}, {'structure': '93', 'title': 'The Pandavas Reproached', 'page': None}, {'structure': '94', 'title': 'Aswatthama', 'page': None}, {'structure': '95', 'title': 'Avenged', 'page': None}, {'structure': '96', 'title': 'Who Can Give Solace?', 'page': None}, {'structure': '97', 'title': \"Yudhishthira's Anguish\", 'page': None}, {'structure': '98', 'title': 'Yudhishthira Comforted', 'page': None}, {'structure': '99', 'title': 'Envy', 'page': None}, {'structure': '100', 'title': 'Utanga', 'page': None}, {'structure': '101', 'title': 'A Pound Of Flour', 'page': None}, {'structure': '102', 'title': 'Yudhishthira Rules', 'page': None}, {'structure': '103', 'title': 'Dhritarashtra', 'page': None}, {'structure': '104', 'title': 'The Passing Away Of The Three', 'page': None}, {'structure': '105', 'title': 'Kri shna Passes Away', 'page': None}, {'structure': '106', 'title': \"Yudhishthira's Final Trial\", 'page': None}]"
+  },
+  {
+    "message": "len(group_texts): 12"
+  },
+  {
+    "message": "add_page_number_to_toc: [{'structure': '10', 'title': 'Death Of Pandu', 'physical_index': None}, {'structure': '11', 'title': 'Bhima', 'physical_index': '<physical_index_208>'}, {'structure': '12', 'title': 'Karna', 'physical_index': '<physical_index_211>'}, {'structure': '13', 'title': 'Drona', 'physical_index': '<physical_index_209>'}, {'structure': '14', 'title': 'The Wax Palace', 'physical_index': None}, {'structure': '15', 'title': 'The Escape Of The Pandavas', 'physical_index': None}, {'structure': '16', 'title': 'The Slaying Of Bakasura', 'physical_index': None}, {'structure': '17', 'title': \"Draupadi's Swayamvaram\", 'physical_index': None}, {'structure': '18', 'title': 'Indraprastha', 'physical_index': None}, {'structure': '19', 'title': 'The Saranga Birds', 'physical_index': None}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '10', 'title': 'Death Of Pandu', 'physical_index': None}, {'structure': '11', 'title': 'Bhima', 'physical_index': 208}, {'structure': '12', 'title': 'Karna', 'physical_index': 211}, {'structure': '13', 'title': 'Drona', 'physical_index': 209}, {'structure': '14', 'title': 'The Wax Palace', 'physical_index': None}, {'structure': '15', 'title': 'The Escape Of The Pandavas', 'physical_index': None}, {'structure': '16', 'title': 'The Slaying Of Bakasura', 'physical_index': None}, {'structure': '17', 'title': \"Draupadi's Swayamvaram\", 'physical_index': None}, {'structure': '18', 'title': 'Indraprastha', 'physical_index': None}, {'structure': '19', 'title': 'The Saranga Birds', 'physical_index': None}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 1.0,
+    "incorrect_results": []
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with the book title and editor information, followed by a Contents list. There is no occurrence of the section title 'Preface' at the very start (or any early part) of the provided text, so the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with entries like 'Brihadratha : ...' and many other names before the line 'Bhima : The second Pandava brother ...'. Since there is content preceding the 'Bhima' title, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with content about the devas and other entries like Kagola before the line that starts with \"Karna :\". Since there is preceding text, the section titled \"Karna\" does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with entries like \"Devata\", \"Devavrata\", \"Devayani\", etc., and only later contains the line \"Drona : Son of a Brahmana...\". Since there is content before the \"Drona\" section, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "len(group_texts): 11"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'GANA PATI, THE SCRIBE', 'physical_index': '<physical_index_4>'}, {'structure': '2', 'title': 'DEVAVRATA', 'physical_index': '<physical_index_6>'}, {'structure': '3', 'title': \"BHISHMA'S VOW\", 'physical_index': '<physical_index_8>'}, {'structure': '4', 'title': 'AMBA AND BHISHMA', 'physical_index': '<physical_index_9>'}, {'structure': '5', 'title': 'DEVAYANI AND KACHA', 'physical_index': '<physical_index_10>'}, {'structure': '6', 'title': 'THE MARRIAGE OF DEVAYANI', 'physical_index': '<physical_index_12>'}, {'structure': '7', 'title': 'YAYATI', 'physical_index': '<physical_index_14>'}, {'structure': '8', 'title': 'VIDURA', 'physical_index': '<physical_index_17>'}, {'structure': '9', 'title': 'KUNTI DEVI', 'physical_index': '<physical_index_20>'}, {'structure': '10', 'title': 'DEATH OF PANDU', 'physical_index': '<physical_index_21>'}, {'structure': '11', 'title': 'BHIMA', 'physical_index': '<physical_index_22>'}, {'structure': '12', 'title': 'KARNA', 'physical_index': '<physical_index_23>'}, {'structure': '13', 'title': 'DRONA', 'physical_index': '<physical_index_25>'}, {'structure': '14', 'title': 'THE WAX PALACE', 'physical_index': '<physical_index_27>'}, {'structure': '15', 'title': 'THE ESCAPE OF THE PANDAVAS', 'physical_index': '<physical_index_29>'}, {'structure': '16', 'title': 'THE SLAYING OF BAKASURA', 'physical_index': '<physical_index_31>'}, {'structure': '17', 'title': \"DRAUPADI'S SWAYAMVARAM\", 'physical_index': '<physical_index_33>'}, {'structure': '18', 'title': 'INDRAPRASTHA', 'physical_index': '<physical_index_35>'}, {'structure': '19', 'title': 'THE SARANGA BIRDS', 'physical_index': '<physical_index_40>'}, {'structure': '20', 'title': 'JARASANDHA', 'physical_index': '<physical_index_42>'}, {'structure': '21', 'title': 'THE SLAYING OF JARASANDHA', 'physical_index': '<physical_index_43>'}, {'structure': '22', 'title': 'THE FIRST HONOR', 'physical_index': '<physical_index_45>'}, {'structure': '23', 'title': 'SAKUNI COMES IN', 'physical_index': '<physical_index_46>'}, {'structure': '24', 'title': 'THE INVITATION', 'physical_index': '<physical_index_48>'}, {'structure': '25', 'title': 'THE WAGER', 'physical_index': '<physical_index_50>'}, {'structure': '26', 'title': \"DRAUPAD'S GRIEF\", 'physical_index': '<physical_index_52>'}, {'structure': '27', 'title': \"DHRITARASHTRA'S ANXIETY\", 'physical_index': '<physical_index_55>'}, {'structure': '28', 'title': \"KRISHNA'S VOW\", 'physical_index': '<physical_index_58>'}, {'structure': '29', 'title': 'PASUPATA', 'physical_index': '<physical_index_60>'}, {'structure': '30', 'title': 'AFFLICTION IS NO THING NEW', 'physical_index': '<physical_index_62>'}, {'structure': '31', 'title': 'AGASTYA', 'physical_index': '<physical_index_64>'}, {'structure': '32', 'title': 'RISHYASRINGA', 'physical_index': '<physical_index_66>'}, {'structure': '33', 'title': 'FRUITLESS PENANCE', 'physical_index': '<physical_index_68>'}, {'structure': '34', 'title': \"YAVAKRIDA'S END\", 'physical_index': '<physical_index_70>'}, {'structure': '35', 'title': 'MERE LEARNING IS NOT ENOUGH', 'physical_index': '<physical_index_71>'}, {'structure': '36', 'title': 'ASHTAVAKRA', 'physical_index': '<physical_index_72>'}, {'structure': '37', 'title': 'BHIMA AND HANUMAN', 'physical_index': '<physical_index_75>'}, {'structure': '38', 'title': 'I AM NO CRANE', 'physical_index': '<physical_index_77>'}, {'structure': '39', 'title': 'THE WICKED ARE NEVER SATISFIED', 'physical_index': '<physical_index_78>'}, {'structure': '40', 'title': 'DURYOD HANA DISGRACED', 'physical_index': '<physical_index_80>'}, {'structure': '41', 'title': \"SRI KRISHNA'S HU NGER\", 'physical_index': '<physical_index_81>'}, {'structure': '42', 'title': 'THE ENCHANTED POOL', 'physical_index': '<physical_index_82>'}, {'structure': '43', 'title': 'DOMESTIC SERVICE', 'physical_index': '<physical_index_87>'}, {'structure': '44', 'title': 'VIRTUE VINDICATED', 'physical_index': '<physical_index_90>'}, {'structure': '45', 'title': 'MATSYA DEFENDED', 'physical_index': '<physical_index_93>'}, {'structure': '46', 'title': 'PRINCE UTTARA', 'physical_index': '<physical_index_94>'}, {'structure': '47', 'title': 'PROMISE FULFILLED', 'physical_index': '<physical_index_98>'}, {'structure': '48', 'title': \"VIRATA'S DELUSION\", 'physical_index': '<physical_index_99>'}, {'structure': '49', 'title': 'TAKING COUNSEL', 'physical_index': '<physical_index_102>'}, {'structure': '50', 'title': \"ARJUNA'S CHARIOT EER\", 'physical_index': '<physical_index_104>'}, {'structure': '51', 'title': 'SALYA AGAINST HIS NEPHEWS', 'physical_index': '<physical_index_107>'}, {'structure': '52', 'title': 'VRITRA', 'physical_index': '<physical_index_108>'}, {'structure': '53', 'title': 'NAHUSHA', 'physical_index': '<physical_index_110>'}, {'structure': '54', 'title': \"SANJAYA'S MISSION\", 'physical_index': '<physical_index_112>'}, {'structure': '55', 'title': 'NOT A NEEDLE-POINT OF TERRITORY', 'physical_index': '<physical_index_113>'}, {'structure': '56', 'title': \"KRISHNA'S MISSION\", 'physical_index': '<physical_index_115>'}, {'structure': '57', 'title': 'ATTACHMENT AND DUTY', 'physical_index': '<physical_index_119>'}, {'structure': '58', 'title': 'THE PANDAVA GENERALISSIMO', 'physical_index': '<physical_index_119>'}, {'structure': '59', 'title': 'BALARAMA', 'physical_index': '<physical_index_122>'}, {'structure': '60', 'title': 'RUKMINI', 'physical_index': '<physical_index_123>'}, {'structure': '61', 'title': 'NON-COOPERATION', 'physical_index': '<physical_index_124>'}, {'structure': '62', 'title': 'KRISHNA TEACHES', 'physical_index': '<physical_index_125>'}, {'structure': '63', 'title': 'YUDHISHTHIRA SEEKS BENEDICTION', 'physical_index': '<physical_index_126>'}, {'structure': '64', 'title': \"THE FIRST DAY'S BATTLE\", 'physical_index': '<physical_index_127>'}, {'structure': '65', 'title': 'THE SECOND DAY', 'physical_index': '<physical_index_128>'}, {'structure': '66', 'title': \"THE THIRD DAY'S BATTLE\", 'physical_index': '<physical_index_129>'}, {'structure': '67', 'title': 'THE FOURTH DAY', 'physical_index': '<physical_index_130>'}, {'structure': '68', 'title': 'THE FIFTH DAY', 'physical_index': '<physical_index_131>'}, {'structure': '69', 'title': 'THE SIXTH DAY', 'physical_index': '<physical_index_132>'}, {'structure': '70', 'title': 'THE SEVENTH DAY', 'physical_index': '<physical_index_138>'}, {'structure': '71', 'title': 'THE EIGHTH DAY', 'physical_index': '<physical_index_139>'}, {'structure': '72', 'title': 'THE NINTH DAY', 'physical_index': '<physical_index_141>'}, {'structure': '73', 'title': 'THE PASSING OF BHISHMA', 'physical_index': '<physical_index_143>'}, {'structure': '74', 'title': 'KARNA AND THE GRANDSIRE', 'physical_index': '<physical_index_144>'}, {'structure': '75', 'title': 'DRONA IN COMMAND', 'physical_index': '<physical_index_145>'}, {'structure': '76', 'title': 'TO SEIZE YUDHISH THIRA ALIVE', 'physical_index': '<physical_index_146>'}, {'structure': '77', 'title': 'THE TWELFTH DAY', 'physical_index': '<physical_index_147>'}, {'structure': '78', 'title': 'BRAVE BHAGADATTA', 'physical_index': '<physical_index_148>'}, {'structure': '79', 'title': 'ABHIMANYU', 'physical_index': '<physical_index_149>'}, {'structure': '80', 'title': 'THE DEATH OF ABHIMANYU', 'physical_index': '<physical_index_150>'}, {'structure': '81', 'title': \"A FATHER'S GRIEF\", 'physical_index': '<physical_index_158>'}, {'structure': '82', 'title': 'THE SINDHU KING', 'physical_index': '<physical_index_159>'}, {'structure': '83', 'title': 'BORROWED ARMOR', 'physical_index': '<physical_index_162>'}, {'structure': '84', 'title': \"YUDHISHTHIRA'S MISSING\", 'physical_index': '<physical_index_162>'}, {'structure': '85', 'title': 'THE DEATH OF KARNA', 'physical_index': '<physical_index_176>'}, {'structure': '86', 'title': 'DURYODHANA', 'physical_index': '<physical_index_177>'}, {'structure': '87', 'title': 'THE PANDAVAS REPROACHED', 'physical_index': '<physical_index_178>'}, {'structure': '88', 'title': 'ASWATTHAMA', 'physical_index': '<physical_index_179>'}, {'structure': '89', 'title': 'AVENGED', 'physical_index': '<physical_index_180>'}, {'structure': '90', 'title': 'WHO CAN GIVE SOLACE?', 'physical_index': '<physical_index_181>'}, {'structure': '91', 'title': \"YUDHISHTHIRA'S ANGUISH\", 'physical_index': '<physical_index_182>'}, {'structure': '92', 'title': 'YUDHISHTHIRA COMFORTED', 'physical_index': '<physical_index_183>'}, {'structure': '93', 'title': 'ENVY', 'physical_index': '<physical_index_184>'}, {'structure': '94', 'title': 'UTANGA', 'physical_index': '<physical_index_185>'}, {'structure': '95', 'title': 'A POUND OF FLOUR', 'physical_index': '<physical_index_186>'}, {'structure': '96', 'title': 'YUDHISHTHIRA', 'physical_index': '<physical_index_195>'}, {'structure': '97', 'title': 'YUDHISHTHIRA RULES MAN', 'physical_index': '<physical_index_196>'}, {'structure': '98', 'title': 'DHRITARASHTRA', 'physical_index': '<physical_index_197>'}, {'structure': '99', 'title': 'THE PASSING AWAY OF THE THREE', 'physical_index': '<physical_index_198>'}, {'structure': '100', 'title': 'KRISHNA PASSES AWAY', 'physical_index': '<physical_index_199>'}, {'structure': '101', 'title': \"YUDHISHTHIRA'S FINAL TRIAL\", 'physical_index': '<physical_index_200>'}, {'structure': '102', 'title': 'GLOSSARY', 'physical_index': '<physical_index_207>'}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'GANA PATI, THE SCRIBE', 'physical_index': 4}, {'structure': '2', 'title': 'DEVAVRATA', 'physical_index': 6}, {'structure': '3', 'title': \"BHISHMA'S VOW\", 'physical_index': 8}, {'structure': '4', 'title': 'AMBA AND BHISHMA', 'physical_index': 9}, {'structure': '5', 'title': 'DEVAYANI AND KACHA', 'physical_index': 10}, {'structure': '6', 'title': 'THE MARRIAGE OF DEVAYANI', 'physical_index': 12}, {'structure': '7', 'title': 'YAYATI', 'physical_index': 14}, {'structure': '8', 'title': 'VIDURA', 'physical_index': 17}, {'structure': '9', 'title': 'KUNTI DEVI', 'physical_index': 20}, {'structure': '10', 'title': 'DEATH OF PANDU', 'physical_index': 21}, {'structure': '11', 'title': 'BHIMA', 'physical_index': 22}, {'structure': '12', 'title': 'KARNA', 'physical_index': 23}, {'structure': '13', 'title': 'DRONA', 'physical_index': 25}, {'structure': '14', 'title': 'THE WAX PALACE', 'physical_index': 27}, {'structure': '15', 'title': 'THE ESCAPE OF THE PANDAVAS', 'physical_index': 29}, {'structure': '16', 'title': 'THE SLAYING OF BAKASURA', 'physical_index': 31}, {'structure': '17', 'title': \"DRAUPADI'S SWAYAMVARAM\", 'physical_index': 33}, {'structure': '18', 'title': 'INDRAPRASTHA', 'physical_index': 35}, {'structure': '19', 'title': 'THE SARANGA BIRDS', 'physical_index': 40}, {'structure': '20', 'title': 'JARASANDHA', 'physical_index': 42}, {'structure': '21', 'title': 'THE SLAYING OF JARASANDHA', 'physical_index': 43}, {'structure': '22', 'title': 'THE FIRST HONOR', 'physical_index': 45}, {'structure': '23', 'title': 'SAKUNI COMES IN', 'physical_index': 46}, {'structure': '24', 'title': 'THE INVITATION', 'physical_index': 48}, {'structure': '25', 'title': 'THE WAGER', 'physical_index': 50}, {'structure': '26', 'title': \"DRAUPAD'S GRIEF\", 'physical_index': 52}, {'structure': '27', 'title': \"DHRITARASHTRA'S ANXIETY\", 'physical_index': 55}, {'structure': '28', 'title': \"KRISHNA'S VOW\", 'physical_index': 58}, {'structure': '29', 'title': 'PASUPATA', 'physical_index': 60}, {'structure': '30', 'title': 'AFFLICTION IS NO THING NEW', 'physical_index': 62}, {'structure': '31', 'title': 'AGASTYA', 'physical_index': 64}, {'structure': '32', 'title': 'RISHYASRINGA', 'physical_index': 66}, {'structure': '33', 'title': 'FRUITLESS PENANCE', 'physical_index': 68}, {'structure': '34', 'title': \"YAVAKRIDA'S END\", 'physical_index': 70}, {'structure': '35', 'title': 'MERE LEARNING IS NOT ENOUGH', 'physical_index': 71}, {'structure': '36', 'title': 'ASHTAVAKRA', 'physical_index': 72}, {'structure': '37', 'title': 'BHIMA AND HANUMAN', 'physical_index': 75}, {'structure': '38', 'title': 'I AM NO CRANE', 'physical_index': 77}, {'structure': '39', 'title': 'THE WICKED ARE NEVER SATISFIED', 'physical_index': 78}, {'structure': '40', 'title': 'DURYOD HANA DISGRACED', 'physical_index': 80}, {'structure': '41', 'title': \"SRI KRISHNA'S HU NGER\", 'physical_index': 81}, {'structure': '42', 'title': 'THE ENCHANTED POOL', 'physical_index': 82}, {'structure': '43', 'title': 'DOMESTIC SERVICE', 'physical_index': 87}, {'structure': '44', 'title': 'VIRTUE VINDICATED', 'physical_index': 90}, {'structure': '45', 'title': 'MATSYA DEFENDED', 'physical_index': 93}, {'structure': '46', 'title': 'PRINCE UTTARA', 'physical_index': 94}, {'structure': '47', 'title': 'PROMISE FULFILLED', 'physical_index': 98}, {'structure': '48', 'title': \"VIRATA'S DELUSION\", 'physical_index': 99}, {'structure': '49', 'title': 'TAKING COUNSEL', 'physical_index': 102}, {'structure': '50', 'title': \"ARJUNA'S CHARIOT EER\", 'physical_index': 104}, {'structure': '51', 'title': 'SALYA AGAINST HIS NEPHEWS', 'physical_index': 107}, {'structure': '52', 'title': 'VRITRA', 'physical_index': 108}, {'structure': '53', 'title': 'NAHUSHA', 'physical_index': 110}, {'structure': '54', 'title': \"SANJAYA'S MISSION\", 'physical_index': 112}, {'structure': '55', 'title': 'NOT A NEEDLE-POINT OF TERRITORY', 'physical_index': 113}, {'structure': '56', 'title': \"KRISHNA'S MISSION\", 'physical_index': 115}, {'structure': '57', 'title': 'ATTACHMENT AND DUTY', 'physical_index': 119}, {'structure': '58', 'title': 'THE PANDAVA GENERALISSIMO', 'physical_index': 119}, {'structure': '59', 'title': 'BALARAMA', 'physical_index': 122}, {'structure': '60', 'title': 'RUKMINI', 'physical_index': 123}, {'structure': '61', 'title': 'NON-COOPERATION', 'physical_index': 124}, {'structure': '62', 'title': 'KRISHNA TEACHES', 'physical_index': 125}, {'structure': '63', 'title': 'YUDHISHTHIRA SEEKS BENEDICTION', 'physical_index': 126}, {'structure': '64', 'title': \"THE FIRST DAY'S BATTLE\", 'physical_index': 127}, {'structure': '65', 'title': 'THE SECOND DAY', 'physical_index': 128}, {'structure': '66', 'title': \"THE THIRD DAY'S BATTLE\", 'physical_index': 129}, {'structure': '67', 'title': 'THE FOURTH DAY', 'physical_index': 130}, {'structure': '68', 'title': 'THE FIFTH DAY', 'physical_index': 131}, {'structure': '69', 'title': 'THE SIXTH DAY', 'physical_index': 132}, {'structure': '70', 'title': 'THE SEVENTH DAY', 'physical_index': 138}, {'structure': '71', 'title': 'THE EIGHTH DAY', 'physical_index': 139}, {'structure': '72', 'title': 'THE NINTH DAY', 'physical_index': 141}, {'structure': '73', 'title': 'THE PASSING OF BHISHMA', 'physical_index': 143}, {'structure': '74', 'title': 'KARNA AND THE GRANDSIRE', 'physical_index': 144}, {'structure': '75', 'title': 'DRONA IN COMMAND', 'physical_index': 145}, {'structure': '76', 'title': 'TO SEIZE YUDHISH THIRA ALIVE', 'physical_index': 146}, {'structure': '77', 'title': 'THE TWELFTH DAY', 'physical_index': 147}, {'structure': '78', 'title': 'BRAVE BHAGADATTA', 'physical_index': 148}, {'structure': '79', 'title': 'ABHIMANYU', 'physical_index': 149}, {'structure': '80', 'title': 'THE DEATH OF ABHIMANYU', 'physical_index': 150}, {'structure': '81', 'title': \"A FATHER'S GRIEF\", 'physical_index': 158}, {'structure': '82', 'title': 'THE SINDHU KING', 'physical_index': 159}, {'structure': '83', 'title': 'BORROWED ARMOR', 'physical_index': 162}, {'structure': '84', 'title': \"YUDHISHTHIRA'S MISSING\", 'physical_index': 162}, {'structure': '85', 'title': 'THE DEATH OF KARNA', 'physical_index': 176}, {'structure': '86', 'title': 'DURYODHANA', 'physical_index': 177}, {'structure': '87', 'title': 'THE PANDAVAS REPROACHED', 'physical_index': 178}, {'structure': '88', 'title': 'ASWATTHAMA', 'physical_index': 179}, {'structure': '89', 'title': 'AVENGED', 'physical_index': 180}, {'structure': '90', 'title': 'WHO CAN GIVE SOLACE?', 'physical_index': 181}, {'structure': '91', 'title': \"YUDHISHTHIRA'S ANGUISH\", 'physical_index': 182}, {'structure': '92', 'title': 'YUDHISHTHIRA COMFORTED', 'physical_index': 183}, {'structure': '93', 'title': 'ENVY', 'physical_index': 184}, {'structure': '94', 'title': 'UTANGA', 'physical_index': 185}, {'structure': '95', 'title': 'A POUND OF FLOUR', 'physical_index': 186}, {'structure': '96', 'title': 'YUDHISHTHIRA', 'physical_index': 195}, {'structure': '97', 'title': 'YUDHISHTHIRA RULES MAN', 'physical_index': 196}, {'structure': '98', 'title': 'DHRITARASHTRA', 'physical_index': 197}, {'structure': '99', 'title': 'THE PASSING AWAY OF THE THREE', 'physical_index': 198}, {'structure': '100', 'title': 'KRISHNA PASSES AWAY', 'physical_index': 199}, {'structure': '101', 'title': \"YUDHISHTHIRA'S FINAL TRIAL\", 'physical_index': 200}, {'structure': '102', 'title': 'GLOSSARY', 'physical_index': 207}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0.47058823529411764,
+    "incorrect_results": [
+      {
+        "list_index": 4,
+        "answer": "no",
+        "title": "DEVAYANI AND KACHA",
+        "page_number": 10
+      },
+      {
+        "list_index": 5,
+        "answer": "no",
+        "title": "THE MARRIAGE OF DEVAYANI",
+        "page_number": 12
+      },
+      {
+        "list_index": 6,
+        "answer": "no",
+        "title": "YAYATI",
+        "page_number": 14
+      },
+      {
+        "list_index": 7,
+        "answer": "no",
+        "title": "VIDURA",
+        "page_number": 17
+      },
+      {
+        "list_index": 16,
+        "answer": "no",
+        "title": "DRAUPADI'S SWAYAMVARAM",
+        "page_number": 33
+      },
+      {
+        "list_index": 17,
+        "answer": "no",
+        "title": "INDRAPRASTHA",
+        "page_number": 35
+      },
+      {
+        "list_index": 22,
+        "answer": "no",
+        "title": "SAKUNI COMES IN",
+        "page_number": 46
+      },
+      {
+        "list_index": 25,
+        "answer": "no",
+        "title": "DRAUPAD'S GRIEF",
+        "page_number": 52
+      },
+      {
+        "list_index": 26,
+        "answer": "no",
+        "title": "DHRITARASHTRA'S ANXIETY",
+        "page_number": 55
+      },
+      {
+        "list_index": 28,
+        "answer": "no",
+        "title": "PASUPATA",
+        "page_number": 60
+      },
+      {
+        "list_index": 32,
+        "answer": "no",
+        "title": "FRUITLESS PENANCE",
+        "page_number": 68
+      },
+      {
+        "list_index": 36,
+        "answer": "no",
+        "title": "BHIMA AND HANUMAN",
+        "page_number": 75
+      },
+      {
+        "list_index": 41,
+        "answer": "no",
+        "title": "THE ENCHANTED POOL",
+        "page_number": 82
+      },
+      {
+        "list_index": 44,
+        "answer": "no",
+        "title": "MATSYA DEFENDED",
+        "page_number": 93
+      },
+      {
+        "list_index": 46,
+        "answer": "no",
+        "title": "PROMISE FULFILLED",
+        "page_number": 98
+      },
+      {
+        "list_index": 47,
+        "answer": "no",
+        "title": "VIRATA'S DELUSION",
+        "page_number": 99
+      },
+      {
+        "list_index": 49,
+        "answer": "no",
+        "title": "ARJUNA'S CHARIOT EER",
+        "page_number": 104
+      },
+      {
+        "list_index": 53,
+        "answer": "no",
+        "title": "SANJAYA'S MISSION",
+        "page_number": 112
+      },
+      {
+        "list_index": 54,
+        "answer": "no",
+        "title": "NOT A NEEDLE-POINT OF TERRITORY",
+        "page_number": 113
+      },
+      {
+        "list_index": 55,
+        "answer": "no",
+        "title": "KRISHNA'S MISSION",
+        "page_number": 115
+      },
+      {
+        "list_index": 57,
+        "answer": "no",
+        "title": "THE PANDAVA GENERALISSIMO",
+        "page_number": 119
+      },
+      {
+        "list_index": 61,
+        "answer": "no",
+        "title": "KRISHNA TEACHES",
+        "page_number": 125
+      },
+      {
+        "list_index": 62,
+        "answer": "no",
+        "title": "YUDHISHTHIRA SEEKS BENEDICTION",
+        "page_number": 126
+      },
+      {
+        "list_index": 63,
+        "answer": "no",
+        "title": "THE FIRST DAY'S BATTLE",
+        "page_number": 127
+      },
+      {
+        "list_index": 64,
+        "answer": "no",
+        "title": "THE SECOND DAY",
+        "page_number": 128
+      },
+      {
+        "list_index": 65,
+        "answer": "no",
+        "title": "THE THIRD DAY'S BATTLE",
+        "page_number": 129
+      },
+      {
+        "list_index": 66,
+        "answer": "no",
+        "title": "THE FOURTH DAY",
+        "page_number": 130
+      },
+      {
+        "list_index": 67,
+        "answer": "no",
+        "title": "THE FIFTH DAY",
+        "page_number": 131
+      },
+      {
+        "list_index": 68,
+        "answer": "no",
+        "title": "THE SIXTH DAY",
+        "page_number": 132
+      },
+      {
+        "list_index": 70,
+        "answer": "no",
+        "title": "THE EIGHTH DAY",
+        "page_number": 139
+      },
+      {
+        "list_index": 71,
+        "answer": "no",
+        "title": "THE NINTH DAY",
+        "page_number": 141
+      },
+      {
+        "list_index": 74,
+        "answer": "no",
+        "title": "DRONA IN COMMAND",
+        "page_number": 145
+      },
+      {
+        "list_index": 75,
+        "answer": "no",
+        "title": "TO SEIZE YUDHISH THIRA ALIVE",
+        "page_number": 146
+      },
+      {
+        "list_index": 76,
+        "answer": "no",
+        "title": "THE TWELFTH DAY",
+        "page_number": 147
+      },
+      {
+        "list_index": 77,
+        "answer": "no",
+        "title": "BRAVE BHAGADATTA",
+        "page_number": 148
+      },
+      {
+        "list_index": 78,
+        "answer": "no",
+        "title": "ABHIMANYU",
+        "page_number": 149
+      },
+      {
+        "list_index": 79,
+        "answer": "no",
+        "title": "THE DEATH OF ABHIMANYU",
+        "page_number": 150
+      },
+      {
+        "list_index": 83,
+        "answer": "no",
+        "title": "YUDHISHTHIRA'S MISSING",
+        "page_number": 162
+      },
+      {
+        "list_index": 84,
+        "answer": "no",
+        "title": "THE DEATH OF KARNA",
+        "page_number": 176
+      },
+      {
+        "list_index": 85,
+        "answer": "no",
+        "title": "DURYODHANA",
+        "page_number": 177
+      },
+      {
+        "list_index": 86,
+        "answer": "no",
+        "title": "THE PANDAVAS REPROACHED",
+        "page_number": 178
+      },
+      {
+        "list_index": 87,
+        "answer": "no",
+        "title": "ASWATTHAMA",
+        "page_number": 179
+      },
+      {
+        "list_index": 88,
+        "answer": "no",
+        "title": "AVENGED",
+        "page_number": 180
+      },
+      {
+        "list_index": 89,
+        "answer": "no",
+        "title": "WHO CAN GIVE SOLACE?",
+        "page_number": 181
+      },
+      {
+        "list_index": 90,
+        "answer": "no",
+        "title": "YUDHISHTHIRA'S ANGUISH",
+        "page_number": 182
+      },
+      {
+        "list_index": 91,
+        "answer": "no",
+        "title": "YUDHISHTHIRA COMFORTED",
+        "page_number": 183
+      },
+      {
+        "list_index": 92,
+        "answer": "no",
+        "title": "ENVY",
+        "page_number": 184
+      },
+      {
+        "list_index": 93,
+        "answer": "no",
+        "title": "UTANGA",
+        "page_number": 185
+      },
+      {
+        "list_index": 94,
+        "answer": "no",
+        "title": "A POUND OF FLOUR",
+        "page_number": 186
+      },
+      {
+        "list_index": 96,
+        "answer": "no",
+        "title": "YUDHISHTHIRA RULES MAN",
+        "page_number": 196
+      },
+      {
+        "list_index": 97,
+        "answer": "no",
+        "title": "DHRITARASHTRA",
+        "page_number": 197
+      },
+      {
+        "list_index": 98,
+        "answer": "no",
+        "title": "THE PASSING AWAY OF THE THREE",
+        "page_number": 198
+      },
+      {
+        "list_index": 99,
+        "answer": "no",
+        "title": "KRISHNA PASSES AWAY",
+        "page_number": 199
+      },
+      {
+        "list_index": 100,
+        "answer": "no",
+        "title": "YUDHISHTHIRA'S FINAL TRIAL",
+        "page_number": 200
+      }
+    ]
+  }
+]

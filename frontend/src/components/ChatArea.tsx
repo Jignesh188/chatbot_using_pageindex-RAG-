@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Section {
     node_id: string;
@@ -153,24 +155,55 @@ export default function ChatArea({ activeDoc, messages, isThinking, onSend, onVi
                         )}
 
                         <div
-                            className={`max-w-[75%] md:max-w-[65%] px-5 py-4 text-[15px] leading-relaxed shadow-sm animate-[slide-up_0.3s_ease-out] ${msg.role === 'user'
+                            className={`max-w-[85%] px-5 py-4 text-[15px] leading-relaxed shadow-sm animate-[slide-up_0.3s_ease-out] overflow-hidden ${msg.role === 'user'
                                 ? 'bg-navy text-white rounded-2xl rounded-tr-sm'
                                 : 'bg-white text-gray-800 border border-gray-100 rounded-2xl rounded-tl-sm'
                                 }`}
                         >
-                            {/* Render basic markdown bold manually for the welcome message formatting */}
-                            {msg.content.split('\n').map((line, idx) => {
-                                const parseBold = (text: string) => {
-                                    const parts = text.split(/(\*\*.*?\*\*)/g);
-                                    return parts.map((part, pIdx) => {
-                                        if (part.startsWith('**') && part.endsWith('**')) {
-                                            return <strong key={pIdx} className="font-bold">{part.slice(2, -2)}</strong>;
-                                        }
-                                        return part;
-                                    });
-                                };
-                                return <p key={idx} className={`${idx !== 0 ? 'mt-2' : ''}`}>{parseBold(line)}</p>;
-                            })}
+                            <ReactMarkdown
+                                remarkPlugins={[remarkGfm]}
+                                components={{
+                                    h1: ({ node, ref, ...props }: any) => <h1 className="text-xl font-bold mt-4 mb-2" {...props} />,
+                                    h2: ({ node, ref, ...props }: any) => <h2 className="text-lg font-bold mt-4 mb-2" {...props} />,
+                                    h3: ({ node, ref, ...props }: any) => <h3 className="text-base font-bold mt-3 mb-2" {...props} />,
+                                    h4: ({ node, ref, ...props }: any) => <h4 className="font-semibold mt-2 mb-1" {...props} />,
+                                    h5: ({ node, ref, ...props }: any) => <h5 className="font-semibold mt-2 mb-1" {...props} />,
+                                    h6: ({ node, ref, ...props }: any) => <h6 className="font-semibold mt-2 mb-1" {...props} />,
+                                    p: ({ node, ref, ...props }: any) => <p className="mb-3 last:mb-0 leading-relaxed" {...props} />,
+                                    a: ({ node, ref, ...props }: any) => <a className="text-blue-500 hover:text-blue-600 underline" target="_blank" rel="noopener noreferrer" {...props} />,
+                                    ol: ({ node, ref, ...props }: any) => <ol className="list-decimal pl-5 mb-3 space-y-1" {...props} />,
+                                    ul: ({ node, ref, ...props }: any) => <ul className="list-disc pl-5 mb-3 space-y-1" {...props} />,
+                                    li: ({ node, ref, ...props }: any) => <li className="" {...props} />,
+                                    table: ({ node, ref, ...props }: any) => (
+                                        <div className="overflow-x-auto my-6 border border-black/10 rounded-lg">
+                                            <table className="border-collapse w-full text-sm text-left align-middle" {...props} />
+                                        </div>
+                                    ),
+                                    thead: ({ node, ref, ...props }: any) => <thead className="bg-[#f0f4f8] text-[#1c2e4a] border-b border-black/10" {...props} />,
+                                    tbody: ({ node, ref, ...props }: any) => <tbody className="divide-y divide-black/5" {...props} />,
+                                    tr: ({ node, ref, ...props }: any) => <tr className="hover:bg-black/5" {...props} />,
+                                    th: ({ node, ref, ...props }: any) => <th className="px-4 py-3 font-semibold border-r border-black/5 last:border-0" {...props} />,
+                                    td: ({ node, ref, ...props }: any) => <td className="px-4 py-3 border-r border-black/5 last:border-0 align-top" {...props} />,
+                                    blockquote: ({ node, ref, ...props }: any) => <blockquote className="border-l-4 border-black/20 pl-4 py-1 italic opacity-80 mb-3" {...props} />,
+                                    code: ({ node, inline, className, children, ...props }: any) => {
+                                        const match = /language-(\w+)/.exec(className || '');
+                                        const isInline = !match && !className;
+                                        return isInline ? (
+                                            <code className="bg-black/10 rounded px-1.5 py-0.5 font-mono text-sm inline-block" {...props}>
+                                                {children}
+                                            </code>
+                                        ) : (
+                                            <code className="block font-mono text-sm leading-relaxed" {...props}>
+                                                {children}
+                                            </code>
+                                        );
+                                    },
+                                    pre: ({ node, ref, ...props }: any) => <pre className="bg-gray-800 text-gray-50 rounded-lg p-4 mb-4 overflow-x-auto text-sm" {...props} />,
+                                    hr: ({ node, ref, ...props }: any) => <hr className="my-4 border-black/10" {...props} />
+                                }}
+                            >
+                                {msg.content.replace(/<br\s*\/?>/gi, '\n\n')}
+                            </ReactMarkdown>
 
                             {/* Retrieved sections */}
                             {msg.sections && msg.sections.length > 0 && (

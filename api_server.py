@@ -89,6 +89,18 @@ def create_node_mapping(tree):
     traverse(tree)
     return mapping
 
+def print_tree(nodes, level=0):
+    """Recursively print the tree structure to the terminal."""
+    if not isinstance(nodes, list):
+        return
+    for node in nodes:
+        indent = "  " * level
+        structure = node.get('structure', '')
+        title = node.get('title', 'Unknown')
+        print(f"{indent}- [{structure}] {title}")
+        if 'nodes' in node and node['nodes']:
+            print_tree(node['nodes'], level + 1)
+
 
 # ─── Endpoints ───────────────────────────────────────────────────────────────
 
@@ -126,6 +138,8 @@ async def upload_pdf(file: UploadFile = File(...), model: str = "gpt-oss:120b-cl
 
     # Process in background
     asyncio.create_task(_process_pdf(doc_id, str(pdf_path), model))
+
+    print(f"Document Submitted: {doc_id}")
 
     return DocumentInfo(
         doc_id=doc_id,
@@ -190,6 +204,10 @@ async def _process_pdf(doc_id: str, pdf_path: str, model: str):
                     "node_map": node_map
                 }}
             )
+
+        print("\nSimplified Tree Structure of the Document:")
+        print_tree(tree_nodes)
+        print() # Empty line for cleaner logs
 
         logger.info(f"📄 Document processed: {os.path.basename(pdf_path)} - {processing_time}s - {total_tokens} tokens - {len(node_map)} sections")
 
@@ -426,13 +444,21 @@ Directly return the final JSON structure. Do not output anything else."""
         )
 
     # ─── Step 3: Answer Generation ───────────────────────────────────────
-    answer_prompt = f"""Answer the question based on the context below.
-If the answer cannot be found in the context, say so clearly.
+    answer_prompt = f"""You are a helpful, conversational, and expert AI assistant.
+Your task is to answer the user's question clearly, naturally, and warmly, using ONLY the information provided in the Context below.
 
-Question: {req.question}
-Context: {relevant_content}
+Guidelines:
+1. Speak in a natural, human-like, and friendly tone.
+2. Structure your answer beautifully (using paragraphs or bullet points if it helps readability).
+3. If the answer cannot be found in the context, politely inform the user that the document doesn't contain that information, rather than making things up.
+4. Do not mention that you are reading from a "context" or "provided text" - just answer the question directly as if you are the knowledgeable author of the document.
 
-Provide a clear, concise answer based only on the context provided."""
+Context:
+{relevant_content}
+
+User Question: {req.question}
+
+Please provide your conversational and helpful answer:"""
 
     tokens_used += count_tokens(answer_prompt, model=req.model)
     answer = await Ollama_API_async(req.model, answer_prompt)
@@ -447,6 +473,7 @@ Provide a clear, concise answer based only on the context provided."""
     if chat_collection is not None:
         try:
             chat_entry = {
+                "session_id": str(uuid.uuid4()),
                 "doc_id": req.doc_id,
                 "user_query": req.question,
                 "bot_response": answer,
