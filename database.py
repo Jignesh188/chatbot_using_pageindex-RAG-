@@ -48,8 +48,14 @@ db = None
 chat_collection = None
 doc_collection = None
 
+# Vector RAG Collections
+vrag_doc_collection = None
+vrag_chunks_collection = None
+vrag_chat_collection = None
+
 def init_db():
     global db_client, db, chat_collection, doc_collection
+    global vrag_doc_collection, vrag_chunks_collection, vrag_chat_collection
     if not MONGO_URI:
         logger.error("MONGO_URI not found in environment variables.")
         return False
@@ -57,8 +63,16 @@ def init_db():
     try:
         db_client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI, serverSelectionTimeoutMS=5000)
         db = db_client["PageindexVSRag"]
+        
+        # PageIndex collections (unchanged)
         chat_collection = db["pageindexchathistory"]
         doc_collection = db["pageindexdocuments"]
+        
+        # Vector RAG collections
+        vrag_doc_collection = db["vectorrag_documents"]
+        vrag_chunks_collection = db["vectorrag_chunks"]
+        vrag_chat_collection = db["vectorrag_chathistory"]
+        
         logger.info("Connected to MongoDB successfully!")
         return True
     except Exception as e:
@@ -73,6 +87,15 @@ def get_chat_collection():
 
 def get_doc_collection():
     return doc_collection
+
+def get_vrag_doc_collection():
+    return vrag_doc_collection
+
+def get_vrag_chunks_collection():
+    return vrag_chunks_collection
+
+def get_vrag_chat_collection():
+    return vrag_chat_collection
 
 def get_logger():
     return logger

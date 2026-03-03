@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: 'PageIndex — Chat with your Documents',
-    description: 'Upload a PDF and chat with it using AI-powered document retrieval',
+    title: 'PageIndex vs Vector RAG — Document Chatbot Comparison',
+    description: 'Compare tree-based PageIndex retrieval with traditional Vector RAG on your PDF documents — side by side, in real time.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

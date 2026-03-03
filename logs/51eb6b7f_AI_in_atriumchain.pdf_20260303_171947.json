@@ -1,0 +1,85 @@
+[
+  {
+    "total_page_number": 6
+  },
+  {
+    "total_token": 2346
+  },
+  {
+    "toc_content": null,
+    "toc_page_list": [],
+    "page_index_given_in_toc": "no"
+  },
+  {
+    "message": "len(group_texts): 1"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'AI Integration & Technical Flows', 'physical_index': '<physical_index_1>'}, {'structure': '1.1', 'title': 'AI-1: Smart Property Valuation & Price Prediction', 'physical_index': '<physical_index_1>'}, {'structure': '1.2', 'title': 'AI-2: Intelligent KYC Document Verification', 'physical_index': '<physical_index_2>'}, {'structure': '1.3', 'title': 'AI-3: Fraud Detection & Risk Scoring', 'physical_index': '<physical_index_3>'}, {'structure': '1.4', 'title': 'AI-4: Personalised Investment Recommendations', 'physical_index': '<physical_index_3>'}, {'structure': '1.5', 'title': 'AI-5: AI-Powered Chatbot & Support Assistant', 'physical_index': '<physical_index_3>'}, {'structure': '1.6', 'title': 'AI-6: Smart Rent Yield Prediction', 'physical_index': '<physical_index_4>'}, {'structure': '1.7', 'title': 'AI-7: Automated Compliance & Regulatory Monitoring', 'physical_index': '<physical_index_5>'}, {'structure': '1.8', 'title': 'AI-8: Market Sentiment Analysis for Secondary Market', 'physical_index': '<physical_index_6>'}, {'structure': '1.9', 'title': 'Summary: AI Features at a Glance', 'physical_index': '<physical_index_6>'}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'AI Integration & Technical Flows', 'physical_index': 1}, {'structure': '1.1', 'title': 'AI-1: Smart Property Valuation & Price Prediction', 'physical_index': 1}, {'structure': '1.2', 'title': 'AI-2: Intelligent KYC Document Verification', 'physical_index': 2}, {'structure': '1.3', 'title': 'AI-3: Fraud Detection & Risk Scoring', 'physical_index': 3}, {'structure': '1.4', 'title': 'AI-4: Personalised Investment Recommendations', 'physical_index': 3}, {'structure': '1.5', 'title': 'AI-5: AI-Powered Chatbot & Support Assistant', 'physical_index': 3}, {'structure': '1.6', 'title': 'AI-6: Smart Rent Yield Prediction', 'physical_index': 4}, {'structure': '1.7', 'title': 'AI-7: Automated Compliance & Regulatory Monitoring', 'physical_index': 5}, {'structure': '1.8', 'title': 'AI-8: Market Sentiment Analysis for Secondary Market', 'physical_index': 6}, {'structure': '1.9', 'title': 'Summary: AI Features at a Glance', 'physical_index': 6}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0.7,
+    "incorrect_results": [
+      {
+        "list_index": 2,
+        "answer": "no",
+        "title": "AI-2: Intelligent KYC Document Verification",
+        "page_number": 2
+      },
+      {
+        "list_index": 3,
+        "answer": "no",
+        "title": "AI-3: Fraud Detection & Risk Scoring",
+        "page_number": 3
+      },
+      {
+        "list_index": 7,
+        "answer": "no",
+        "title": "AI-7: Automated Compliance & Regulatory Monitoring",
+        "page_number": 5
+      }
+    ]
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 2, 'title': 'AI-2: Intelligent KYC Document Verification', 'prev_correct': 1, 'next_correct': 3}, {'list_index': 3, 'title': 'AI-3: Fraud Detection & Risk Scoring', 'prev_correct': 1, 'next_correct': 3}, {'list_index': 7, 'title': 'AI-7: Automated Compliance & Regulatory Monitoring', 'prev_correct': 4, 'next_correct': 6}]"
+  },
+  {
+    "message": "invalid_results: []"
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with 'AI Integration & T echnical Flows', which matches the given title 'AI Integration & Technical Flows' aside from a minor spacing difference and the missing period. Ignoring space inconsistencies as instructed, the section title is effectively at the very start of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with introductory content about AI Integration & Technical Flows before the line containing the section title. Since there is other content preceding the title, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with diagram syntax (e.g., \"D --> E{Document Type Detection}\") and does not contain the section title \"AI-2: Intelligent KYC Document Verification\" at its start or anywhere else. Therefore, the section does not start at the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with 'cute. - Assigns a risk score...'. The expected section title 'AI-3: Fraud Detection & Risk Scoring' is not the first content and does not even appear in the provided text. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with unrelated content ('cute. - Assigns a risk score to every transaction...'), and only later contains the section title 'AI-4: Personalised Investment Recommendations'. Since there is preceding text before the title, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with diagram definitions and other content, and the title 'AI-5: AI-Powered Chatbot & Support Assistant' does not appear at the very start (or at all) before other sections like AI-6. Therefore the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text begins with diagram definitions and other content (e.g., \"D --> H[General FAQ...]\") before the line \\'AI-6: Smart Rent Yield Prediction\\' appears. Therefore, the section title does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with 'ports.' followed by a technical flow diagram and later sections like 'AI-8: Market Sentiment Analysis...'. The given section title 'AI-7: Automated Compliance & Regulatory Monitoring' does not appear at the very start (or anywhere clearly) of the provided text, so the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with 'How it helps:' and other explanatory content before any mention of the section title. Since there is preceding content, the section title does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text begins with the 'How it helps:' content, and only later contains the line 'Summary: AI F eatures at a Glance' (which matches the given title ignoring extra spaces). Since there is other content before the title, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  }
+]

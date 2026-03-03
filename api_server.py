@@ -28,7 +28,12 @@ from pageindex.utils import (
 )
 
 from fastapi.responses import FileResponse
-from database import get_logger, get_chat_collection, get_doc_collection
+from database import (
+    get_logger, get_chat_collection, get_doc_collection,
+    get_vrag_doc_collection, get_vrag_chunks_collection, get_vrag_chat_collection
+)
+from vector_rag.processor import VectorRAGProcessor
+from vector_rag.search import VectorRAGSearch
 
 logger = get_logger()
 app = FastAPI(title="PageIndex API", version="1.0.0")
@@ -136,8 +141,9 @@ async def upload_pdf(file: UploadFile = File(...), model: str = "gpt-oss:120b-cl
         logger.error("DB Not initialized. Upload failed.")
         raise HTTPException(status_code=500, detail="Database not connected")
 
-    # Process in background
+    # Process in background — both PageIndex AND Vector RAG in parallel
     asyncio.create_task(_process_pdf(doc_id, str(pdf_path), model))
+    asyncio.create_task(_process_vector_rag(doc_id, str(pdf_path), file.filename))
 
     print(f"Document Submitted: {doc_id}")
 
@@ -276,10 +282,21 @@ async def delete_document(doc_id: str):
     if not doc:
         raise HTTPException(status_code=404, detail="Document not found")
         
-    # Delete from MongoDB
+    # Delete PageIndex data from MongoDB
     await doc_collection.delete_one({"doc_id": doc_id})
     if chat_collection is not None:
         await chat_collection.delete_many({"doc_id": doc_id})
+    
+    # Delete Vector RAG data from MongoDB
+    vrag_doc_col = get_vrag_doc_collection()
+    vrag_chunks_col = get_vrag_chunks_collection()
+    vrag_chat_col = get_vrag_chat_collection()
+    if vrag_doc_col is not None:
+        await vrag_doc_col.delete_one({"doc_id": doc_id})
+    if vrag_chunks_col is not None:
+        await vrag_chunks_col.delete_many({"doc_id": doc_id})
+    if vrag_chat_col is not None:
+        await vrag_chat_col.delete_many({"doc_id": doc_id})
         
     # Delete physical PDF if exists
     pdf_path = doc.get("pdf_path")
@@ -288,15 +305,14 @@ async def delete_document(doc_id: str):
     
     # Delete result JSON if exists
     pdf_name = os.path.splitext(os.path.basename(doc.get("doc_name", "")))[0]
-    result_path = RESULTS_DIR / f"{doc_id}_{pdf_name}_structure.json" # Not always this format, but we'll try to clean up what we can.
-    # Actually, tree results are saved as:
+    result_path = RESULTS_DIR / f"{doc_id}_{pdf_name}_structure.json"
     pdf_name_actual_file = os.path.splitext(os.path.basename(pdf_path))[0]
     result_path_actual = RESULTS_DIR / f"{pdf_name_actual_file}_structure.json"
     if os.path.exists(result_path_actual):
         os.remove(result_path_actual)
         
-    logger.info(f"🗑️ Deleted document {doc_id} successfully")
-    return {"status": "success", "message": "Document deleted"}
+    logger.info(f"🗑️ Deleted document {doc_id} and all Vector RAG data successfully")
+    return {"status": "success", "message": "Document and all associated data deleted"}
 
 @app.get("/api/documents/{doc_id}/view")
 async def view_document(doc_id: str):
@@ -448,10 +464,12 @@ Directly return the final JSON structure. Do not output anything else."""
 Your task is to answer the user's question clearly, naturally, and warmly, using ONLY the information provided in the Context below.
 
 Guidelines:
-1. Speak in a natural, human-like, and friendly tone.
+1. Speak in a natural, human-like, and friendly tone If the user greets (Hi, Hy, hey, Hello, hello, Good morning, etc..) or says Goodbye, respond politely and naturally.
 2. Structure your answer beautifully (using paragraphs or bullet points if it helps readability).
 3. If the answer cannot be found in the context, politely inform the user that the document doesn't contain that information, rather than making things up.
 4. Do not mention that you are reading from a "context" or "provided text" - just answer the question directly as if you are the knowledgeable author of the document.
+5. If the user asks something outside the scope of the provided document, politely say: "I only know about the information provided in your document. Please ask questions related to it."
+
 
 Context:
 {relevant_content}
@@ -494,6 +512,235 @@ Please provide your conversational and helpful answer:"""
         tokens_used=tokens_used,
         response_time=response_time,
     )
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# ─── Vector RAG Endpoints ────────────────────────────────────────────────
+# ═══════════════════════════════════════════════════════════════════════════
+
+class VRAGChatRequest(BaseModel):
+    doc_id: str
+    question: str
+    model: str = "gpt-oss:120b-cloud"
+
+
+async def _process_vector_rag(doc_id: str, pdf_path: str, doc_name: str):
+    """Background task: run Vector RAG pipeline on the uploaded PDF."""
+    vrag_doc_col = get_vrag_doc_collection()
+    vrag_chunks_col = get_vrag_chunks_collection()
+
+    if vrag_doc_col is None:
+        logger.error("❌ [VectorRAG] DB not connected")
+        return
+
+    # Insert initial status
+    await vrag_doc_col.insert_one({
+        "doc_id": doc_id,
+        "doc_name": doc_name,
+        "status": "processing",
+        "num_chunks": 0,
+        "num_pages": 0,
+        "embedding_dim": 0,
+        "total_text_tokens": 0,
+        "total_chunk_tokens": 0,
+        "processing_time": None,
+        "extract_time": None,
+        "chunk_time": None,
+        "embed_time": None,
+        "timestamp": time.time(),
+    })
+
+    try:
+        processor = VectorRAGProcessor()
+        result = await processor.process_pdf(doc_id, pdf_path)
+
+        # Store each chunk with embedding in MongoDB
+        chunks_to_store = []
+        for chunk in result["chunks"]:
+            chunks_to_store.append({
+                "doc_id": doc_id,
+                "chunk_index": chunk["chunk_index"],
+                "text": chunk["text"],
+                "token_count": chunk["token_count"],
+                "page_numbers": chunk["page_numbers"],
+                "char_start": chunk["char_start"],
+                "char_end": chunk["char_end"],
+                "embedding": chunk["embedding"],
+            })
+
+        if chunks_to_store and vrag_chunks_col is not None:
+            await vrag_chunks_col.insert_many(chunks_to_store)
+            logger.info(f"💾 [VectorRAG] Stored {len(chunks_to_store)} chunks in MongoDB")
+
+        # Update document status
+        await vrag_doc_col.update_one(
+            {"doc_id": doc_id},
+            {"$set": {
+                "status": "completed",
+                "num_chunks": result["num_chunks"],
+                "num_pages": result["num_pages"],
+                "embedding_dim": result["embedding_dim"],
+                "total_text_tokens": result["total_text_tokens"],
+                "total_chunk_tokens": result["total_chunk_tokens"],
+                "processing_time": result["processing_time"],
+                "extract_time": result["extract_time"],
+                "chunk_time": result["chunk_time"],
+                "embed_time": result["embed_time"],
+            }}
+        )
+
+    except Exception as e:
+        logger.error(f"❌ [VectorRAG] Error processing {doc_id}: {e}")
+        if vrag_doc_col is not None:
+            await vrag_doc_col.update_one(
+                {"doc_id": doc_id},
+                {"$set": {"status": "error", "error": str(e)}}
+            )
+
+
+@app.get("/api/vector-rag/status/{doc_id}")
+async def get_vrag_status(doc_id: str):
+    """Check Vector RAG processing status for a document."""
+    vrag_doc_col = get_vrag_doc_collection()
+    if vrag_doc_col is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+
+    doc = await vrag_doc_col.find_one({"doc_id": doc_id})
+    if not doc:
+        return {
+            "doc_id": doc_id,
+            "status": "not_started",
+            "num_chunks": 0,
+            "num_pages": 0,
+            "embedding_dim": 0,
+            "total_text_tokens": 0,
+            "total_chunk_tokens": 0,
+            "processing_time": None,
+        }
+
+    return {
+        "doc_id": doc["doc_id"],
+        "status": doc.get("status", "unknown"),
+        "num_chunks": doc.get("num_chunks", 0),
+        "num_pages": doc.get("num_pages", 0),
+        "embedding_dim": doc.get("embedding_dim", 0),
+        "total_text_tokens": doc.get("total_text_tokens", 0),
+        "total_chunk_tokens": doc.get("total_chunk_tokens", 0),
+        "processing_time": doc.get("processing_time"),
+        "extract_time": doc.get("extract_time"),
+        "chunk_time": doc.get("chunk_time"),
+        "embed_time": doc.get("embed_time"),
+    }
+
+
+@app.get("/api/vector-rag/chunks/{doc_id}")
+async def get_vrag_chunks(doc_id: str):
+    """Get all chunks for a document (without embeddings for UI display)."""
+    vrag_chunks_col = get_vrag_chunks_collection()
+    if vrag_chunks_col is None:
+        return []
+
+    cursor = vrag_chunks_col.find(
+        {"doc_id": doc_id},
+        {"embedding": 0, "_id": 0}  # Exclude large embedding arrays from response
+    ).sort("chunk_index", 1)
+    chunks = await cursor.to_list(length=10000)
+    return chunks
+
+
+@app.post("/api/vector-rag/chat")
+async def vrag_chat(req: VRAGChatRequest):
+    """Chat with a document using Vector RAG similarity search."""
+    vrag_doc_col = get_vrag_doc_collection()
+    if vrag_doc_col is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+
+    doc = await vrag_doc_col.find_one({"doc_id": req.doc_id})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Vector RAG data not found for this document")
+
+    if doc.get("status") != "completed":
+        raise HTTPException(status_code=400, detail="Vector RAG processing not complete")
+
+    start_time = time.time()
+    search_engine = VectorRAGSearch()
+
+    # Step 1: Search for relevant chunks
+    relevant_chunks = await search_engine.search_chunks(
+        query=req.question,
+        doc_id=req.doc_id,
+        top_k=5
+    )
+
+    # Step 2: Generate answer using the same gpt-oss model
+    answer_result = await search_engine.generate_answer(
+        query=req.question,
+        relevant_chunks=relevant_chunks,
+        model=req.model
+    )
+
+    response_time = round(time.time() - start_time, 2)
+    tokens_used = answer_result["tokens_used"]
+
+    logger.info(
+        f"💬 [VectorRAG] Chat: \"{req.question[:50]}...\" → "
+        f"{tokens_used} tokens, {response_time}s"
+    )
+
+    # Save to Vector RAG chat history
+    vrag_chat_col = get_vrag_chat_collection()
+    if vrag_chat_col is not None:
+        try:
+            chat_entry = {
+                "session_id": str(uuid.uuid4()),
+                "doc_id": req.doc_id,
+                "user_query": req.question,
+                "bot_response": answer_result["answer"],
+                "relevant_chunks": relevant_chunks,
+                "tokens_used": tokens_used,
+                "response_time": response_time,
+                "timestamp": time.time(),
+            }
+            await vrag_chat_col.insert_one(chat_entry)
+        except Exception as e:
+            logger.warning(f"⚠️ [VectorRAG] Failed to save chat history: {e}")
+
+    return {
+        "answer": answer_result["answer"],
+        "relevant_chunks": relevant_chunks,
+        "tokens_used": tokens_used,
+        "response_time": response_time,
+    }
+
+
+@app.get("/api/vector-rag/chat/history/{doc_id}")
+async def get_vrag_chat_history(doc_id: str):
+    """Fetch Vector RAG chat history for a document."""
+    vrag_chat_col = get_vrag_chat_collection()
+    if vrag_chat_col is None:
+        return []
+
+    try:
+        cursor = vrag_chat_col.find({"doc_id": doc_id}).sort("timestamp", 1)
+        history = await cursor.to_list(length=100)
+
+        formatted = []
+        for entry in history:
+            formatted.append({
+                "role": "user",
+                "content": entry.get("user_query", "")
+            })
+            formatted.append({
+                "role": "bot",
+                "content": entry.get("bot_response", ""),
+                "chunks": entry.get("relevant_chunks", []),
+                "tokens": entry.get("tokens_used", 0),
+                "time": entry.get("response_time", 0),
+            })
+        return formatted
+    except Exception as e:
+        logger.error(f"❌ [VectorRAG] Error fetching chat history: {e}")
+        return []
 
 
 if __name__ == "__main__":
